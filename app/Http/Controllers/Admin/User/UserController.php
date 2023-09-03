@@ -58,7 +58,7 @@ class UserController extends Controller
             "phone_number.numeric" => "Vui lòng nhập đúng định dạng",
             "phone_number.required" => "Vui lòng thêm nhóm quyền",
             "group_id.numeric" => "Giá trị phải là số",
-            "email.max" => "Tối đa :max kí tự",
+            "full_name.max" => "Tối đa :max kí tự",
             "email.required" => "Vui lòng nhập email",
             "email.email" => "Vui lòng nhập đúng định dạng",
             "email.unique" => "Email này đã được sử dụng",

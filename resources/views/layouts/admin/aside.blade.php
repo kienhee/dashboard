@@ -15,11 +15,17 @@
             'route' => 'dashboard.index',
             'children' => [],
         ],
+        // [
+        //     'name' => 'Quản lí danh mục',
+        //     'classIcon' => 'menu-icon tf-icons bx bx-category',
+        //     'route' => '#',
+        //     'children' => [['name' => 'Thêm mới danh mục', 'route' => 'dashboard.user.add'], ['name' => 'Danh sách danh mục', 'route' => 'dashboard.category.index']],
+        // ],
         [
-            'name' => 'Quản lí danh mục',
-            'classIcon' => 'menu-icon tf-icons bx bx-category',
+            'name' => 'Quản lí nhóm',
+            'classIcon' => 'menu-icon tf-icons bx bxs-group',
             'route' => '#',
-            'children' => [['name' => 'Thêm mới danh mục', 'route' => 'dashboard.user.add'], ['name' => 'Danh sách danh mục', 'route' => 'dashboard.category.index']],
+            'children' => [['name' => 'Thêm nhóm mới', 'route' => 'dashboard.group.add'], ['name' => 'Danh sách nhóm', 'route' => 'dashboard.group.index']],
         ],
         [
             'name' => 'Quản lí người dùng',

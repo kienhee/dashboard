@@ -1,10 +1,11 @@
 <?php
 
 use App\Http\Controllers\Admin\Auth\AuthController;
-use App\Http\Controllers\Admin\Category\categoryController;
+use App\Http\Controllers\Admin\Category\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\Group\GroupController;
 use App\Http\Controllers\Admin\User\UserController;
 
 /*
@@ -25,7 +26,7 @@ Route::prefix('/dashboard')->name('dashboard.')->middleware('auth')->group(funct
     Route::get('/', [DashboardController::class, "dashboard"])->name('index');
 
     Route::prefix('categories')->name('category.')->group(function () {
-        Route::get('/', [categoryController::class, 'index'])->name('index');
+        Route::get('/', [CategoryController::class, 'index'])->name('index');
         // Route::get('/add-a-memmber', [categoryController::class, 'add'])->name('add');
         // Route::post('/add-a-memmber', [categoryController::class, 'store'])->name('store');
         // Route::get('/edit-a-memmber/{user}', [categoryController::class, 'edit'])->name('edit');
@@ -35,7 +36,18 @@ Route::prefix('/dashboard')->name('dashboard.')->middleware('auth')->group(funct
         // Route::delete('/restore-a-memmber/{id}', [categoryController::class, 'restore'])->name('restore');
         // Route::get('/account-setting', [categoryController::class, 'AccountSetting'])->name('account-setting');
     });
-        // Quản lí người dùng
+    Route::prefix('groups')->name('group.')->group(function () {
+        Route::get('/', [GroupController::class, 'index'])->name('index');
+        Route::get('/add-a-group', [GroupController::class, 'add'])->name('add');
+        Route::post('/add-a-group', [GroupController::class, 'store'])->name('store');
+        // Route::get('/edit-a-group/{user}', [GroupController::class, 'edit'])->name('edit');
+        // Route::put('/edit-a-group/{id}', [GroupController::class, 'update'])->name('update');
+        // Route::delete('/soft-delete-a-group/{id}', [GroupController::class, 'softDelete'])->name('soft-delete');
+        // Route::delete('/force-delete-a-group/{id}', [GroupController::class, 'forceDelete'])->name('force-delete');
+        // Route::delete('/restore-a-group/{id}', [GroupController::class, 'restore'])->name('restore');
+        // Route::get('/account-setting', [GroupController::class, 'AccountSetting'])->name('account-setting');
+    });
+    // Quản lí người dùng
     Route::prefix('users')->name('user.')->group(function () {
         Route::get('/', [UserController::class, 'index'])->name('index');
         Route::get('/add-a-memmber', [UserController::class, 'add'])->name('add');
