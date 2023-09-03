@@ -13,7 +13,7 @@ use App\Http\Controllers\Admin\TemplateController;
 | -> Các routes dành cho các mẫu
 */
 
-Route::prefix('/dashboard')->name('dashboard.')->group(function () {
+Route::prefix('/dashboard')->name('dashboard.')->middleware('auth')->group(function () {
     Route::prefix('/templates')->name('templates.')->group(function () {
         Route::prefix('/account-settings')->name('account-settings.')->group(function () {
             Route::get('/account', [TemplateController::class, 'Account'])->name('account');
