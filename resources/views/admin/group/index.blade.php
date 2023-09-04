@@ -37,7 +37,7 @@
                         @foreach ($groups as $item)
                             <tr>
                                 <td><i class="fab fa-angular fa-lg text-danger "></i> <a
-                                        href="{{ route('dashboard.user.edit', $item->id) }}"><strong>#{{ $item->id }}</strong>
+                                        href="{{ route('dashboard.group.edit', $item->id) }}"><strong>#{{ $item->id }}</strong>
                                     </a>
                                 </td>
                                 <td>{{ $item->name }}</td>
@@ -52,27 +52,20 @@
                                             <i class="bx bx-dots-vertical-rounded"></i>
                                         </button>
                                         <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="{{ route('dashboard.user.edit', $item->id) }}"><i
+                                            <a class="dropdown-item"
+                                                href="{{ route('dashboard.group.edit', $item->id) }}"><i
                                                     class="bx bx-edit-alt me-1"></i>
                                                 Sửa thông tin</a>
-                                            <form class="dropdown-item"
-                                                action="{{ route('dashboard.user.restore', $item->id) }}" method="POST">
-                                                @csrf
-                                                @method('delete')
-                                                <button class="btn p-0  w-100 text-start" type="submit">
-                                                    <i class='bx bx-revision'></i>
-                                                    Khôi phục hoạt động
-                                                </button>
-                                            </form>
+
 
                                             <form class="dropdown-item"
-                                                action="{{ route('dashboard.user.soft-delete', $item->id) }}" method="POST"
+                                                action="{{ route('dashboard.group.delete', $item->id) }}" method="POST"
                                                 onsubmit="return confirm('Bạn chắc chắn muốn xóa vĩnh viễn?')">
                                                 @csrf
                                                 @method('delete')
                                                 <button class="btn p-0  w-100 text-start" type="submit">
                                                     <i class="bx bx-trash me-1"></i>
-                                                    'Xóa vĩnh viễn'
+                                                    Xóa vĩnh viễn
                                                 </button>
                                             </form>
                                         </div>

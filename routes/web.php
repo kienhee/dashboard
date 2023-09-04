@@ -40,12 +40,11 @@ Route::prefix('/dashboard')->name('dashboard.')->middleware('auth')->group(funct
         Route::get('/', [GroupController::class, 'index'])->name('index');
         Route::get('/add-a-group', [GroupController::class, 'add'])->name('add');
         Route::post('/add-a-group', [GroupController::class, 'store'])->name('store');
-        // Route::get('/edit-a-group/{user}', [GroupController::class, 'edit'])->name('edit');
-        // Route::put('/edit-a-group/{id}', [GroupController::class, 'update'])->name('update');
-        // Route::delete('/soft-delete-a-group/{id}', [GroupController::class, 'softDelete'])->name('soft-delete');
-        // Route::delete('/force-delete-a-group/{id}', [GroupController::class, 'forceDelete'])->name('force-delete');
-        // Route::delete('/restore-a-group/{id}', [GroupController::class, 'restore'])->name('restore');
-        // Route::get('/account-setting', [GroupController::class, 'AccountSetting'])->name('account-setting');
+        Route::get('/edit-a-group/{group}', [GroupController::class, 'edit'])->name('edit');
+        Route::put('/edit-a-group/{id}', [GroupController::class, 'update'])->name('update');
+      
+        Route::delete('/delete-a-group/{id}', [GroupController::class, 'delete'])->name('delete');
+ 
     });
     // Quản lí người dùng
     Route::prefix('users')->name('user.')->group(function () {
