@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\Category;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CategoryController extends Controller
 {
@@ -90,5 +91,35 @@ class CategoryController extends Controller
             return back()->with('msgSuccess', 'Cập nhật thành công');
         }
         return back()->with('msgError', 'Cập nhật thất bại!');
+    }
+    public function softDelete($id)
+    {
+        $check =
+            Category::destroy($id);
+        if ($check) {
+            return back()->with('msgSuccess', 'Đổi trạng thái thành công');
+        }
+        return back()->with('msgError', 'Đổi trạng thái thất bại!');
+    }
+    public function restore($id)
+    {
+        $check = Category::onlyTrashed()->where('id', $id)->restore();
+        if ($check) {
+            return back()->with('msgSuccess', 'Khôi phục dùng thành công');
+        }
+        return back()->with('msgError', 'Khôi phục dùng thất bại!');
+    }
+    public function forceDelete($id)
+    {
+        // $CheckUserExists = User::where('group_id', $id)->get();
+        // if ($CheckUserExists->count() > 0) {
+        //     return back()->with('msgError', 'Còn ' . $CheckUserExists->count() . ' người dùng trong nhóm , không thể xóa');
+        // }
+        // check sản phẩm tồn tại trong danh mục
+        $check = Category::onlyTrashed()->where('id', $id)->forceDelete();
+        if ($check) {
+            return back()->with('msgSuccess', 'Xóa thành công');
+        }
+        return back()->with('msgError', 'Xóa thất bại!');
     }
 }

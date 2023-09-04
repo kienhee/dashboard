@@ -31,10 +31,9 @@ Route::prefix('/dashboard')->name('dashboard.')->middleware('auth')->group(funct
         Route::post('/add-a-category', [categoryController::class, 'store'])->name('store');
         Route::get('/edit-a-category/{category}', [categoryController::class, 'edit'])->name('edit');
         Route::put('/edit-a-category/{id}', [categoryController::class, 'update'])->name('update');
-        // Route::delete('/soft-delete-a-category/{id}', [categoryController::class, 'softDelete'])->name('soft-delete');
-        // Route::delete('/force-delete-a-category/{id}', [categoryController::class, 'forceDelete'])->name('force-delete');
-        // Route::delete('/restore-a-category/{id}', [categoryController::class, 'restore'])->name('restore');
-        // Route::get('/account-setting', [categoryController::class, 'AccountSetting'])->name('account-setting');
+        Route::delete('/soft-delete-a-category/{id}', [categoryController::class, 'softDelete'])->name('soft-delete');
+        Route::delete('/force-delete-a-category/{id}', [categoryController::class, 'forceDelete'])->name('force-delete');
+        Route::delete('/restore-a-category/{id}', [categoryController::class, 'restore'])->name('restore');
     });
     Route::prefix('groups')->name('group.')->group(function () {
         Route::get('/', [GroupController::class, 'index'])->name('index');
@@ -42,9 +41,8 @@ Route::prefix('/dashboard')->name('dashboard.')->middleware('auth')->group(funct
         Route::post('/add-a-group', [GroupController::class, 'store'])->name('store');
         Route::get('/edit-a-group/{group}', [GroupController::class, 'edit'])->name('edit');
         Route::put('/edit-a-group/{id}', [GroupController::class, 'update'])->name('update');
-      
+
         Route::delete('/delete-a-group/{id}', [GroupController::class, 'delete'])->name('delete');
- 
     });
     // Quản lí người dùng
     Route::prefix('users')->name('user.')->group(function () {

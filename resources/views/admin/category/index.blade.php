@@ -88,7 +88,7 @@
                                         class="badge  me-1 {{ $item->type == 'product' ? 'bg-label-info ' : ' bg-label-warning' }}">{{ $item->type == 'product' ? 'Sản phẩm' : 'Tin tức' }}</span>
                                 </td>
                                 <td><span
-                                        class="badge  me-1 {{ $item->deleted_at == null ? 'bg-label-success ' : ' bg-label-primary' }}">{{ $item->deleted_at == null ? 'Hoạt động' : 'Ngừng hoạt động' }}</span>
+                                        class="badge  me-1 {{ $item->deleted_at == null ? 'bg-label-success ' : ' bg-label-primary' }}">{{ $item->deleted_at == null ? 'Hoạt động' : 'Đang ẩn' }}</span>
                                 </td>
 
                                 <td>
@@ -109,18 +109,18 @@
                                             @if (Auth::user()->id != $item->id)
                                                 @if ($item->trashed() == 1)
                                                     <form class="dropdown-item"
-                                                        action="{{ route('dashboard.user.restore', $item->id) }}"
+                                                        action="{{ route('dashboard.category.restore', $item->id) }}"
                                                         method="POST">
                                                         @csrf
                                                         @method('delete')
                                                         <button class="btn p-0  w-100 text-start" type="submit">
                                                             <i class='bx bx-revision'></i>
-                                                            Khôi phục hoạt động
+                                                            Hiện danh mục
                                                         </button>
                                                     </form>
                                                 @endif
                                                 <form class="dropdown-item"
-                                                    action="{{ $item->trashed() ? route('dashboard.user.force-delete', $item->id) : route('dashboard.user.soft-delete', $item->id) }}"
+                                                    action="{{ $item->trashed() ? route('dashboard.category.force-delete', $item->id) : route('dashboard.category.soft-delete', $item->id) }}"
                                                     method="POST"
                                                     @if ($item->trashed()) onsubmit="return confirm('Bạn chắc chắn muốn xóa vĩnh viễn?')" @endif>
                                                     @csrf
@@ -128,7 +128,7 @@
                                                     <button class="btn p-0  w-100 text-start" type="submit">
                                                         <i
                                                             class="bx {{ $item->trashed() ? 'bx-trash' : 'bx bxs-hand' }}  me-1"></i>
-                                                        {{ $item->trashed() ? 'Xóa vĩnh viễn' : 'Tạm ngưng hoạt động' }}
+                                                        {{ $item->trashed() ? 'Xóa vĩnh viễn' : 'Tạm ẩn danh mục' }}
                                                     </button>
                                                 </form>
                                             @endif
