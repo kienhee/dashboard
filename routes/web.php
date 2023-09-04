@@ -27,13 +27,13 @@ Route::prefix('/dashboard')->name('dashboard.')->middleware('auth')->group(funct
 
     Route::prefix('categories')->name('category.')->group(function () {
         Route::get('/', [CategoryController::class, 'index'])->name('index');
-        // Route::get('/add-a-memmber', [categoryController::class, 'add'])->name('add');
-        // Route::post('/add-a-memmber', [categoryController::class, 'store'])->name('store');
-        // Route::get('/edit-a-memmber/{user}', [categoryController::class, 'edit'])->name('edit');
-        // Route::put('/edit-a-memmber/{id}', [categoryController::class, 'update'])->name('update');
-        // Route::delete('/soft-delete-a-memmber/{id}', [categoryController::class, 'softDelete'])->name('soft-delete');
-        // Route::delete('/force-delete-a-memmber/{id}', [categoryController::class, 'forceDelete'])->name('force-delete');
-        // Route::delete('/restore-a-memmber/{id}', [categoryController::class, 'restore'])->name('restore');
+        Route::get('/add-a-category', [categoryController::class, 'add'])->name('add');
+        Route::post('/add-a-category', [categoryController::class, 'store'])->name('store');
+        Route::get('/edit-a-category/{category}', [categoryController::class, 'edit'])->name('edit');
+        Route::put('/edit-a-category/{id}', [categoryController::class, 'update'])->name('update');
+        // Route::delete('/soft-delete-a-category/{id}', [categoryController::class, 'softDelete'])->name('soft-delete');
+        // Route::delete('/force-delete-a-category/{id}', [categoryController::class, 'forceDelete'])->name('force-delete');
+        // Route::delete('/restore-a-category/{id}', [categoryController::class, 'restore'])->name('restore');
         // Route::get('/account-setting', [categoryController::class, 'AccountSetting'])->name('account-setting');
     });
     Route::prefix('groups')->name('group.')->group(function () {

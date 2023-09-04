@@ -18,7 +18,7 @@
         @endif
         <div class="d-flex justify-content-between align-items-center mx-3">
             <h5 class="card-header px-0">Danh sách danh mục</h5>
-            <a href="{{ route('dashboard.user.add') }}" class="btn btn-outline-primary btn-sm"> Thêm mới danh mục</a>
+            <a href="{{ route('dashboard.category.add') }}" class="btn btn-outline-primary btn-sm"> Thêm mới danh mục</a>
         </div>
         <hr class="my-0 mb-4" />
 
@@ -74,7 +74,7 @@
                         @foreach ($categories as $item)
                             <tr>
                                 <td><i class="fab fa-angular fa-lg text-danger "></i> <a
-                                        href="{{ route('dashboard.user.edit', $item->id) }}"><strong>#{{ $item->id }}</strong>
+                                        href="{{ route('dashboard.category.edit', $item->id) }}"><strong>#{{ $item->id }}</strong>
                                     </a>
                                 </td>
                                 <td>{{ $item->name }}</td>
@@ -85,7 +85,7 @@
                                     {{ $item->group->name ?? '' }}
                                 </td>
                                 <td class="text-center"><span
-                                        class="badge  me-1 {{ $item->type == 1 ? 'bg-label-info ' : ' bg-label-warning' }}">{{ $item->type == 1 ? 'Sản phẩm' : 'Tin tức' }}</span>
+                                        class="badge  me-1 {{ $item->type == 'product' ? 'bg-label-info ' : ' bg-label-warning' }}">{{ $item->type == 'product' ? 'Sản phẩm' : 'Tin tức' }}</span>
                                 </td>
                                 <td><span
                                         class="badge  me-1 {{ $item->deleted_at == null ? 'bg-label-success ' : ' bg-label-primary' }}">{{ $item->deleted_at == null ? 'Hoạt động' : 'Ngừng hoạt động' }}</span>
@@ -102,7 +102,7 @@
                                         </button>
                                         <div class="dropdown-menu">
                                             <a class="dropdown-item"
-                                                href="{{ route('dashboard.user.edit', $item->id) }}"><i
+                                                href="{{ route('dashboard.category.edit', $item->id) }}"><i
                                                     class="bx bx-edit-alt me-1"></i>
                                                 Sửa thông tin</a>
 

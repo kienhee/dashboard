@@ -15,9 +15,10 @@ return new class extends Migration
             $table->increments('id');
             $table->string('cover')->nullable();
             $table->string('name', 100);
+            $table->string('slug');
             $table->string('description')->nullable();
             $table->integer('category_id');
-            $table->tinyInteger('type');
+            $table->string('type', 10);
             $table->softDeletes();
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();

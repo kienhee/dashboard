@@ -19,7 +19,7 @@
             'name' => 'Quản lí danh mục',
             'classIcon' => 'menu-icon tf-icons bx bx-category',
             'route' => '#',
-            'children' => [['name' => 'Thêm mới danh mục', 'route' => 'dashboard.user.add'], ['name' => 'Danh sách danh mục', 'route' => 'dashboard.category.index']],
+            'children' => [['name' => 'Thêm mới danh mục', 'route' => 'dashboard.category.add'], ['name' => 'Danh sách danh mục', 'route' => 'dashboard.category.index']],
         ],
         [
             'name' => 'Quản lí nhóm',

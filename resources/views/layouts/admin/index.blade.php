@@ -120,6 +120,7 @@
 
     <!-- Main JS -->
     <script src="{{ asset('admin/assets') }}/js/main.js"></script>
+    <script src="{{ asset('admin/assets') }}/js/generateSlug.js"></script>
 
     <!-- Page JS -->
     <script src="{{ asset('admin/assets') }}/js/dashboards-analytics.js"></script>
