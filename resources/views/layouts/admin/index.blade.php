@@ -30,7 +30,8 @@
     <link rel="stylesheet" href="{{ asset('admin/assets') }}/vendor/css/theme-default.css"
         class="template-customizer-theme-css" />
     <link rel="stylesheet" href="{{ asset('admin/assets') }}/css/demo.css" />
-
+    <link rel="stylesheet" href="{{ asset('admin/assets') }}/css/coloris.min.css" />
+    <link rel="stylesheet" href="{{ asset('admin/assets') }}/css/virtual-select.min.css" />
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="{{ asset('admin/assets') }}/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
@@ -41,11 +42,17 @@
     <link rel="stylesheet" href="{{ asset('admin/assets') }}/vendor/css/pages/page-misc.css" />
     <!-- Helpers -->
     <script src="{{ asset('admin/assets') }}/vendor/js/helpers.js"></script>
-
+    <script src="https://cdn.tiny.cloud/1/el9eht3oqsjlpvjkdu2mx5gh01fq5xie6zt09pq791iqfhej/tinymce/6/tinymce.min.js"
+        referrerpolicy="origin"></script>
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="{{ asset('admin/assets') }}/js/config.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
 
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
 </head>
 
 <body>
@@ -121,6 +128,8 @@
     <!-- Main JS -->
     <script src="{{ asset('admin/assets') }}/js/main.js"></script>
     <script src="{{ asset('admin/assets') }}/js/generateSlug.js"></script>
+    <script src="{{ asset('admin/assets') }}/js/virtual-select.min.js"></script>
+    <script src="{{ asset('admin/assets') }}/js/coloris.min.js"></script>
 
     <!-- Page JS -->
     <script src="{{ asset('admin/assets') }}/js/dashboards-analytics.js"></script>
@@ -131,6 +140,36 @@
             loadingBg.style.display = "none"; // Ẩn nền loading
         });
     </script>
+    <script>
+        tinymce.init({
+            selector: 'textarea#content-product',
+            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+        });
+        VirtualSelect.init({
+            ele: '#select-multiple'
+        });
+        Coloris({
+            format: 'hex',
+            el: '.coloris',
+            theme: 'large',
+            themeMode: 'light', // light, dark, auto
+            swatches: [
+                '#264653',
+                '#2a9d8f',
+                '#e9c46a',
+                '#f4a261',
+                '#e76f51',
+                '#d62828',
+                '#023e8a',
+                '#0077b6',
+                '#0096c7',
+                '#00b4d8',
+                '#48cae4',
+            ]
+        });
+    </script>
+
 </body>
 
 </html>

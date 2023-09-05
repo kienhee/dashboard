@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Category;
+use App\Models\Color;
 use App\Models\Group;
 
 function getAllGroups()
@@ -10,4 +11,8 @@ function getAllGroups()
 function getAllCategories()
 {
     return Category::all();
+}
+function getAllColors()
+{
+    return Color::all();
 }

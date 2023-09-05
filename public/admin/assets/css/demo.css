@@ -145,3 +145,27 @@
   align-items: center;
   background: #ffffff
 }
+
+.vscomp-ele {
+  max-width: 100% !important;
+}
+
+.vscomp-arrow::after {
+  border-bottom-color: #697a8d !important;
+  border-right-color: #697a8d !important;
+}
+
+.vscomp-toggle-button {
+  border: 1px solid #d9dee3 !important;
+  border-radius: 0.375rem;
+  padding: 0.4375rem 1.875rem 0.4375rem 0.875rem !important;
+  color: #697a8d !important;
+  font-size: 0.9375rem !important;
+  line-height: 1.53 !important;
+  font-weight: 400 !important;
+}
+
+.vscomp-wrapper.focused .vscomp-toggle-button,
+.vscomp-wrapper:focus .vscomp-toggle-button {
+  box-shadow: none !important;
+}

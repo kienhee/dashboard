@@ -22,6 +22,17 @@
             'children' => [['name' => 'Thêm mới danh mục', 'route' => 'dashboard.category.add'], ['name' => 'Danh sách danh mục', 'route' => 'dashboard.category.index']],
         ],
         [
+            'name' => 'Quản lí sản phẩm',
+            'classIcon' => 'menu-icon tf-icons bx bx-package',
+            'route' => '#',
+            'children' => [
+                ['name' => 'Danh sách sản phẩm', 'route' => 'dashboard.category.index'],
+                ['name' => 'Thêm mới sản phẩm', 'route' => 'dashboard.product.add'],
+              ['name' => 'Bảng màu', 'route' => 'dashboard.color.index'],
+               ['name' => 'Kích thước', 'route' => 'dashboard.category.index'],
+               ['name' => 'Tags', 'route' => 'dashboard.category.index']],
+        ],
+        [
             'name' => 'Quản lí nhóm',
             'classIcon' => 'menu-icon tf-icons bx bxs-group',
             'route' => '#',
