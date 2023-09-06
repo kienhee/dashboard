@@ -1,8 +1,8 @@
 @extends('layouts.admin.index')
-@section('title', 'Quản lí bảng màu')
+@section('title', 'Quản lí kích thước')
 
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lí bảng màu/</span> Danh sách bảng màu</h4>
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lí kích thước/</span> Danh sách kích thước</h4>
     <div class="card">
         @if (session('msgSuccess'))
             <div class=" mt-3 mx-3 alert alert-success alert-dismissible" role="alert">
@@ -17,8 +17,8 @@
             </div>
         @endif
         <div class="d-flex justify-content-between align-items-center mx-3">
-            <h5 class="card-header px-0">Danh sách bảng màu</h5>
-            <a href="{{ route('dashboard.color.add') }}" class="btn btn-outline-primary btn-sm"> Thêm mới bảng màu</a>
+            <h5 class="card-header px-0">Danh sách kích thước</h5>
+            <a href="{{ route('dashboard.size.add') }}" class="btn btn-outline-primary btn-sm"> Thêm mới kích thước</a>
         </div>
         <hr class="my-0 mb-4" />
 
@@ -28,25 +28,20 @@
                     <tr>
                         <th>#ID</th>
                         <th>Tên màu</th>
-                        <th>Mã code</th>
                         <th>Ngày tạo</th>
                         <th>Cài đặt</th>
                     </tr>
                 </thead>
                 <tbody class="table-border-bottom-0">
-                    @if ($colors->count() > 0)
+                    @if ($sizes->count() > 0)
 
-                        @foreach ($colors as $item)
+                        @foreach ($sizes as $item)
                             <tr>
                                 <td><i class="fab fa-angular fa-lg text-danger "></i> <a
-                                        href="{{ route('dashboard.color.edit', $item->id) }}"><strong>#{{ $item->id }}</strong>
+                                        href="{{ route('dashboard.size.edit', $item->id) }}"><strong>#{{ $item->id }}</strong>
                                     </a>
                                 </td>
                                 <td>{{ $item->name }}</td>
-                                <td class="d-flex align-items-center gap-1">
-                                    <span>{{ $item->code }} </span><span
-                                        style="display:inline-block;width:15px;height:15px;border-radius:2px;background-color:{{ $item->code }}"></span>
-                                </td>
                                 <td>
                                     {{ $item->created_at->format('d-m-Y') ?? '' }}
                                 </td>
@@ -58,11 +53,11 @@
                                         </button>
                                         <div class="dropdown-menu">
                                             <a class="dropdown-item"
-                                                href="{{ route('dashboard.color.edit', $item->id) }}"><i
+                                                href="{{ route('dashboard.size.edit', $item->id) }}"><i
                                                     class="bx bx-edit-alt me-1"></i>
                                                 Sửa thông tin</a>
                                             <form class="dropdown-item"
-                                                action="{{ route('dashboard.color.delete', $item->id) }}" method="POST"
+                                                action="{{ route('dashboard.size.delete', $item->id) }}" method="POST"
                                                 onsubmit="return confirm('Bạn chắc chắn muốn xóa vĩnh viễn?')">
                                                 @csrf
                                                 @method('delete')

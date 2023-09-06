@@ -1,63 +1,59 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Color;
+namespace App\Http\Controllers\Admin\Tag;
 
 use App\Http\Controllers\Controller;
-use App\Models\Color;
+use App\Models\Tag;
 use Illuminate\Http\Request;
 
-class ColorController extends Controller
+class TagController extends Controller
 {
     public function index()
     {
-        $colors = Color::all();
-        return view('admin.color.index', compact('colors'));
+        $tags = Tag::all();
+        return view('admin.tag.index', compact('tags'));
     }
     public function add()
     {
-        return view('admin.color.add');
+        return view('admin.tag.add');
     }
     public function store(Request $request)
     {
 
         $validate = $request->validate([
-            'name' => 'required|max:50|unique:colors,name',
-            'code' => 'required|max:50|unique:colors,code',
+            'name' => 'required|max:50|unique:tags,name',
+            'type' => 'required',
         ], [
             "name.required" => "Vui lòng nhập trường này",
             "name.unique" => "Tên này đã tồn tại!",
             "name.max" => "Tối đa :max kí tự",
-            "code.required" => "Vui lòng chọn màu",
-            "code.unique" => "Mã hex đã tồn tại!",
-            "code.max" => "Tối đa :max kí tự",
+            "type.required" => "Vui lòng loại thẻ",
         ]);
 
-        $check = Color::insert($validate);
+        $check = Tag::insert($validate);
         if ($check) {
             return back()->with('msgSuccess', 'Thêm thành công');
         }
         return back()->with('msgError', 'Thêm thất bại!');
     }
-    public function edit(Color $color)
+    public function edit(Tag $tag)
     {
-        return view('admin.color.edit', compact('color'));
+        return view('admin.tag.edit', compact('tag'));
     }
     public function update(Request $request, $id)
     {
 
         $validate = $request->validate([
-            'name' => 'required|max:50|unique:colors,name,' . $id,
-            'code' => 'required|max:50|unique:colors,code,' . $id,
+            'name' => 'required|max:50|unique:tags,name,' . $id,
+            'type' => 'required',
         ], [
             "name.required" => "Vui lòng nhập trường này",
             "name.unique" => "Tên này đã tồn tại!",
             "name.max" => "Tối đa :max kí tự",
-            "code.required" => "Vui lòng chọn màu",
-            "code.unique" => "Mã hex đã tồn tại!",
-            "code.max" => "Tối đa :max kí tự",
+            "type.required" => "Vui lòng loại thẻ",
         ]);
 
-        $check = Color::where('id', $id)->update($validate);
+        $check = Tag::where('id', $id)->update($validate);
         if ($check) {
             return back()->with('msgSuccess', 'Thêm thành công');
         }
@@ -65,9 +61,8 @@ class ColorController extends Controller
     }
     public function delete($id)
     {
-
         $check =
-            Color::destroy($id);
+            Tag::destroy($id);
         if ($check) {
             return back()->with('msgSuccess', 'Xóa thành công');
         }

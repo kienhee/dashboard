@@ -7,9 +7,12 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function add(){
+    public function add()
+    {
         return view('admin.product.add');
     }
-
-    
+    public function store(Request $request)
+    {
+        dd($request->all());
+    }
 }

@@ -7,7 +7,10 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\Group\GroupController;
+use App\Http\Controllers\Admin\ImageController;
 use App\Http\Controllers\Admin\Product\ProductController;
+use App\Http\Controllers\Admin\Size\SizeController;
+use App\Http\Controllers\Admin\Tag\TagController;
 use App\Http\Controllers\Admin\User\UserController;
 
 /*
@@ -40,7 +43,7 @@ Route::prefix('/dashboard')->name('dashboard.')->middleware('auth')->group(funct
     Route::prefix('products')->name('product.')->group(function () {
         // Route::get('/', [ProductController::class, 'index'])->name('index');
         Route::get('/add', [ProductController::class, 'add'])->name('add');
-        // Route::post('/add', [ProductController::class, 'store'])->name('store');
+        Route::post('/add', [ProductController::class, 'store'])->name('store');
         // Route::get('/edit/{product}', [ProductController::class, 'edit'])->name('edit');
         // Route::put('/edit/{id}', [ProductController::class, 'update'])->name('update');
         // Route::delete('/soft-delete/{id}', [ProductController::class, 'softDelete'])->name('soft-delete');
@@ -51,11 +54,25 @@ Route::prefix('/dashboard')->name('dashboard.')->middleware('auth')->group(funct
         Route::get('/', [ColorController::class, 'index'])->name('index');
         Route::get('/add', [ColorController::class, 'add'])->name('add');
         Route::post('/add', [ColorController::class, 'store'])->name('store');
-        // Route::get('/edit/{product}', [ColorController::class, 'edit'])->name('edit');
-        // Route::put('/edit/{id}', [ColorController::class, 'update'])->name('update');
-        // Route::delete('/soft-delete/{id}', [ColorController::class, 'softDelete'])->name('soft-delete');
-        // Route::delete('/force-delete/{id}', [ColorController::class, 'forceDelete'])->name('force-delete');
-        // Route::delete('/restore/{id}', [ColorController::class, 'restore'])->name('restore');
+        Route::get('/edit/{color}', [ColorController::class, 'edit'])->name('edit');
+        Route::put('/edit/{id}', [ColorController::class, 'update'])->name('update');
+        Route::delete('/delete/{id}', [ColorController::class, 'delete'])->name('delete');
+    });
+    Route::prefix('sizes')->name('size.')->group(function () {
+        Route::get('/', [SizeController::class, 'index'])->name('index');
+        Route::get('/add', [SizeController::class, 'add'])->name('add');
+        Route::post('/add', [SizeController::class, 'store'])->name('store');
+        Route::get('/edit/{size}', [SizeController::class, 'edit'])->name('edit');
+        Route::put('/edit/{id}', [SizeController::class, 'update'])->name('update');
+        Route::delete('/delete/{id}', [SizeController::class, 'delete'])->name('delete');
+    });
+    Route::prefix('tags')->name('tag.')->group(function () {
+        Route::get('/', [TagController::class, 'index'])->name('index');
+        Route::get('/add', [TagController::class, 'add'])->name('add');
+        Route::post('/add', [TagController::class, 'store'])->name('store');
+        Route::get('/edit/{tag}', [TagController::class, 'edit'])->name('edit');
+        Route::put('/edit/{id}', [TagController::class, 'update'])->name('update');
+        Route::delete('/delete/{id}', [TagController::class, 'delete'])->name('delete');
     });
     // Quản lí nhóm người dùng
     Route::prefix('groups')->name('group.')->group(function () {
@@ -79,6 +96,7 @@ Route::prefix('/dashboard')->name('dashboard.')->middleware('auth')->group(funct
         Route::delete('/restore/{id}', [UserController::class, 'restore'])->name('restore');
         Route::get('/account-setting', [UserController::class, 'AccountSetting'])->name('account-setting');
     });
+    Route::post('/upload', [ImageController::class, 'upload'])->name('upload');
 });
 Route::prefix('/auth-dashboard')->name('auth.')->group(function () {
     Route::get('/login', [AuthController::class, 'loginView'])->name('loginView');
@@ -88,3 +106,6 @@ Route::prefix('/auth-dashboard')->name('auth.')->group(function () {
 });
 //Routes dành cho các mẫu
 require __DIR__ . '/template.php';
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});

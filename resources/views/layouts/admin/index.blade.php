@@ -130,6 +130,7 @@
     <script src="{{ asset('admin/assets') }}/js/generateSlug.js"></script>
     <script src="{{ asset('admin/assets') }}/js/virtual-select.min.js"></script>
     <script src="{{ asset('admin/assets') }}/js/coloris.min.js"></script>
+    <script src="{{ asset('admin/assets') }}/js/initTinymce.js"></script>
 
     <!-- Page JS -->
     <script src="{{ asset('admin/assets') }}/js/dashboards-analytics.js"></script>
@@ -141,11 +142,6 @@
         });
     </script>
     <script>
-        tinymce.init({
-            selector: 'textarea#content-product',
-            plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
-            toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
-        });
         VirtualSelect.init({
             ele: '#select-multiple'
         });

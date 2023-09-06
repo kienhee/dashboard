@@ -3,44 +3,44 @@
 @section('content')
     <div class="row">
         <div class="col-md-12">
-            <div class="card mb-4">
-                @if (session('msgSuccess'))
-                    <div class=" mt-3 mx-3 alert alert-success alert-dismissible" role="alert">
-                        {{ session('msgSuccess') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-                @if (session('msgError'))
-                    <div class="mt-3 mx-3  alert alert-danger alert-dismissible" role="alert">
-                        {{ session('msgError') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-                <div class="d-flex justify-content-between align-items-center mx-3">
-                    <h5 class="card-header px-0">Thông tin cá nhân</h5>
-                    <a href="{{ route('dashboard.user.index') }}" class="btn btn-outline-primary btn-sm">Danh sách người
-                        dùng</a>
-                </div>
-                <hr class="my-0" />
-                <!-- Account -->
-                <div class="card-body">
-                    <div class="d-flex align-items-start align-items-sm-center gap-4">
-                        <img src="{{ $user->avatar ?? asset('images/avatar-default.png') }}" alt="{{ $user->full_name }}"
-                            class="d-block rounded" height="100" width="100" id="uploadedAvatar" />
-                        <div class="button-wrapper">
-                            <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
-                                <span class="d-none d-sm-block">Ảnh đại diện</span>
-                                <i class="bx bx-upload d-block d-sm-none"></i>
-                                <input type="file" id="upload" class="account-file-input" hidden
-                                    accept="image/png, image/jpeg" />
-                            </label>
-                            <p class="text-muted mb-0">Được phép JPG, GIF hoặc PNG. Kích thước tối đa 800K</p>
+            <form method="POST" action="{{ route('dashboard.user.update', $user->id) }}" enctype="multipart/form-data">
+                <div class="card mb-4">
+                    @if (session('msgSuccess'))
+                        <div class=" mt-3 mx-3 alert alert-success alert-dismissible" role="alert">
+                            {{ session('msgSuccess') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                         </div>
+                    @endif
+                    @if (session('msgError'))
+                        <div class="mt-3 mx-3  alert alert-danger alert-dismissible" role="alert">
+                            {{ session('msgError') }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
+
+
+                    <h5 class="card-header">Thông tin cá nhân</h5>
+                    <!-- Account -->
+                    <div class="card-body">
+
+                        <div class="d-flex align-items-start align-items-sm-center gap-4">
+                            <img src="{{ $user->avatar ?? asset('images/avatar-default.png') }}" alt="user-avatar"
+                                class="d-block rounded " style="object-fit:cover" height="100" width="100"
+                                id="uploadedAvatar" />
+                            <div class="button-wrapper">
+                                <label for="upload" class="btn btn-primary me-2 mb-4" tabindex="0">
+                                    <span class="d-none d-sm-block">Ảnh đại diện</span>
+                                    <i class="bx bx-upload d-block d-sm-none"></i>
+                                    <input type="file" id="upload" class="account-file-input" hidden name="avatar"
+                                        accept="image/png, image/jpeg" />
+                                </label>
+                                <p class="text-muted mb-0">Được phép JPG, GIF hoặc PNG. Kích thước tối đa 800K</p>
+                            </div>
+                        </div>
+
                     </div>
-                </div>
-                <hr class="my-0" />
-                <div class="card-body">
-                    <form method="POST" action="{{ route('dashboard.user.update', $user->id) }}">
+                    <hr class="my-0" />
+                    <div class="card-body">
                         @csrf
                         @method('put')
                         <div class="row">
@@ -51,8 +51,8 @@
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="" class="form-label">E-mail:</label>
-                                <input class="form-control" type="text" disabled id=""
-                                    placeholder="john.doe@example.com" value="{{ $user->email }}" />
+                                <input class="form-control" type="text" disabled placeholder="john.doe@example.com"
+                                    value="{{ $user->email }}" />
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="group" class="form-label">Nhóm người dùng:</label>
@@ -76,10 +76,20 @@
                             <button type="submit" class="btn btn-primary me-2">Lưu thay đổi</button>
                             <button type="reset" class="btn btn-outline-secondary">Đặt lại</button>
                         </div>
-                    </form>
-                </div>
-                <!-- /Account -->
-            </div>
+                    </div>
+            </form>
+            <!-- /Account -->
         </div>
     </div>
+    </div>
+    <script>
+        let imgInp = document.getElementById('upload');
+        let preview = document.getElementById('uploadedAvatar');
+        imgInp.onchange = evt => {
+            const [file] = imgInp.files
+            if (file) {
+                preview.src = URL.createObjectURL(file)
+            }
+        }
+    </script>
 @endsection

@@ -4,7 +4,7 @@
 @section('content')
     <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lí sản phẩm /</span> Thêm mới sản phẩm</h4>
     <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-12">
             <div class="card mb-4">
                 @if (session('msgSuccess'))
                     <div class=" mt-3 mx-3 alert alert-success alert-dismissible" role="alert">
@@ -26,7 +26,7 @@
                 <hr class="my-0" />
                 <!-- Account -->
                 <div class="card-body">
-                    <form id="formAccountSettings" action="{{ route('dashboard.category.store') }}" method="POST">
+                    <form action="{{ route('dashboard.product.store') }}" method="POST">
                         @csrf
                         <div class="row">
                             <div class="mb-3 col-md-6">
@@ -110,7 +110,7 @@
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="select-multiple" class="form-label">Màu sắc:</label>
-                                <select id="select-multiple" multiple name="color" placeholder="Thêm màu sắc"
+                                <select id="select-multiple" multiple name="colors" placeholder="Chọn màu sắc"
                                     data-search="true" data-silent-initial-value-set="true">
                                     @foreach (getAllColors() as $color)
                                         <option value="{{ $color->name }}-{{ $color->code }}">{{ $color->name }}
@@ -121,51 +121,79 @@
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="select-multiple" class="form-label">Kích thước:</label>
-                                <select id="select-multiple" multiple name="size" placeholder="Thêm kích thước"
+                                <select id="select-multiple" multiple name="sizes" placeholder="Chọn Kích thước"
+                                    data-search="true" data-silent-initial-value-set="true">
+                                    @foreach (getAllSizes() as $size)
+                                        <option value="{{ $size->name }}">{{ $size->name }}
+                                        </option>
+                                    @endforeach
+
+                                </select>
+                            </div>
+
+
+                            <div class="mb-3 col-md-6">
+                                <label for="select-multiple" class="form-label">Giới tính:</label>
+                                <select id="select-multiple" multiple name="genders" placeholder="Chọn giới tính"
                                     data-search="false" data-silent-initial-value-set="true">
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
-                                    <option value="4">Option 4</option>
-                                    <option value="5">Option 5</option>
-                                    <option value="6">Option 6</option>
+                                    <option value="male">Nam
+                                    </option>
+                                    <option value="female">Nữ
+                                    </option>
+
                                 </select>
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="select-multiple" class="form-label">Tags:</label>
-                                <select id="select-multiple" multiple name="size" placeholder="Thêm kích thước"
-                                    data-search="false" data-silent-initial-value-set="true">
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
-                                    <option value="4">Option 4</option>
-                                    <option value="5">Option 5</option>
-                                    <option value="6">Option 6</option>
+                                <select id="select-multiple" multiple name="tags" placeholder="Chọn thẻ"
+                                    data-search="true" data-silent-initial-value-set="true">
+                                    @foreach (getAllTags() as $tag)
+                                        <option value="{{ $tag->name }}">{{ $tag->name }}
+                                        </option>
+                                    @endforeach
+
                                 </select>
                             </div>
                             <div class="mb-3 col-md-6">
-                                <label for="select-multiple" class="form-label">Giới tính:</label>
-                                <div class="form-check form-check-inline ms-3">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
-                                        value="option1">
-                                    <label class="form-check-label" for="inlineCheckbox1">Nam</label>
+                                <label for="regular_price" class="form-label">Giá thường ("Giá bán công khai"):</label>
+                                <div class="input-group input-group-merge">
+                                    <span class="input-group-text">$</span>
+                                    <input type="text"name="regular_price" class="form-control" placeholder="0.000">
+                                    <span class="input-group-text">VND</span>
                                 </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                        value="option2">
-                                    <label class="form-check-label" for="inlineCheckbox2">Nữ</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3"
-                                        value="option3">
-                                    <label class="form-check-label" for="inlineCheckbox3">Tất cả</label>
-                                </div>
+                                @error('regular_price')
+                                    <p class="text-danger my-1">{{ $message }}</p>
+                                @enderror
                             </div>
-
+                            <div class="mb-3 col-md-6">
+                                <label for="sale_price" class="form-label">Giá sale:</label>
+                                <div class="input-group input-group-merge">
+                                    <span class="input-group-text">$</span>
+                                    <input type="text" name="sale_price" class="form-control" placeholder="0.000">
+                                    <span class="input-group-text">VND</span>
+                                </div>
+                                @error('sale_price')
+                                    <p class="text-danger my-1">{{ $message }}</p>
+                                @enderror
+                            </div>
+                            <div class="form-check form-switch mb-3 ms-3 col-md-6">
+                                <input class="form-check-input" type="checkbox" name="is_Price_includes_taxes"
+                                    id="is_Price_includes_taxes">
+                                <label class="form-check-label" for="is_Price_includes_taxes">Giá đã bao gồm thuế</label>
+                            </div>
+                            <div class="mb-3 col-md-12 " id="tax">
+                                <label for="tax" class="form-label">Thuế (%):</label>
+                                <div class="input-group input-group-merge">
+                                    <span class="input-group-text">%</span>
+                                    <input type="text" name="tax" class="form-control" placeholder="0.00">
+                                </div>
+                                @error('tax')
+                                    <p class="text-danger my-1">{{ $message }}</p>
+                                @enderror
+                            </div>
                         </div>
                         <div class="mt-2">
                             <button type="submit" class="btn btn-primary me-2">Thêm mới sản phẩm</button>
-                            <button type="reset" class="btn btn-outline-secondary">Đặt lại</button>
                         </div>
                     </form>
                 </div>
@@ -173,4 +201,16 @@
             </div>
         </div>
     </div>
+    <script>
+        const checkbox = document.getElementById('is_Price_includes_taxes')
+        const input_tax = document.getElementById('tax');
+        checkbox.addEventListener('change', (event) => {
+            if (event.currentTarget.checked) {
+                input_tax.classList.add("d-none");
+            } else {
+                input_tax.classList.remove("d-none");
+
+            }
+        })
+    </script>
 @endsection

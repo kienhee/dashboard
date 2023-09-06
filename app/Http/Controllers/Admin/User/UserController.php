@@ -91,7 +91,7 @@ class UserController extends Controller
             'full_name' => 'required|max:50',
             'group_id' => 'required|numeric',
             'phone_number' => 'required|numeric',
-
+            'avatar' =>  'image'
         ], [
             "full_name.required" => "Vui lòng nhập trường này",
             "group_id.required" => "Vui lòng thêm nhóm quyền",
@@ -103,9 +103,14 @@ class UserController extends Controller
             "password.confirmed" => "Xác nhận trường mật khẩu không khớp.",
             "password_confirmation.required" => "Vui lòng xác nhận mật khẩu",
             "password_confirmation.min" => "Mật khẩu phải lớn hơn hoặc bằng :min kí tự",
+            "avatar.image" => "Vui lòng chọn đúng định dạng ảnh!",
 
         ]);
-
+        if ($request->hasFile('avatar')) {
+            $path_img =  $request->file('avatar')->store('public/photos/1/profile');
+            // Thay thế public thành storage trong chuỗi path
+            $validate['avatar'] = str_replace("public", getenv('APP_URL') . "/storage", $path_img);
+        }
         $check = User::where('id', $id)->update($validate);
         if ($check) {
             return back()->with('msgSuccess', 'Cập nhật thành công');

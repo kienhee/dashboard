@@ -29,8 +29,8 @@
                 ['name' => 'Danh sách sản phẩm', 'route' => 'dashboard.category.index'],
                 ['name' => 'Thêm mới sản phẩm', 'route' => 'dashboard.product.add'],
               ['name' => 'Bảng màu', 'route' => 'dashboard.color.index'],
-               ['name' => 'Kích thước', 'route' => 'dashboard.category.index'],
-               ['name' => 'Tags', 'route' => 'dashboard.category.index']],
+               ['name' => 'Kích thước', 'route' => 'dashboard.size.index'],
+               ['name' => 'Tags', 'route' => 'dashboard.tag.index']],
         ],
         [
             'name' => 'Quản lí nhóm',
