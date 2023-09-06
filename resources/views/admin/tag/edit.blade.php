@@ -30,8 +30,8 @@
                         @csrf
                         @method('put')
                         <div class="row ">
-                            <div class="mb-3 col-md-6">
-                                <label for="name" class="form-label">Tên kích thước:</label>
+                            <div class="mb-3 col-md-12">
+                                <label for="name" class="form-label">Tên thẻ:</label>
                                 <input class="form-control @error('name') is-invalid @enderror " type="text"
                                     id="name" name="name" value="{{ $tag->name ?? old('name') }}"
                                     placeholder="VD: Size L, M, XL, 1.5, 25 ...v.v" autofocus />
@@ -39,20 +39,7 @@
                                     <p class="text-danger my-1">{{ $message }}</p>
                                 @enderror
                             </div>
-                            <div class="mb-3 col-md-6">
-                                <label for="type" class="form-label">Loại thẻ:</label>
-                                <select class="form-select @error('type') is-invalid @enderror" name="type"
-                                    id="type">
-                                    <option value="">Vui lòng lựa chọn</option>
-                                    <option value="product" {{ $tag->type == 'product' ? 'selected' : '' }}>Dành
-                                        cho sản phẩm</option>
-                                    <option value="blog" {{ $tag->type == 'blog' ? 'selected' : '' }}>Dành cho
-                                        tin tức</option>
-                                </select>
-                                @error('type')
-                                    <p class="text-danger my-1">{{ $message }}</p>
-                                @enderror
-                            </div>
+
                         </div>
                         <div class="mt-2">
                             <button type="submit" class="btn btn-primary me-2">Cập nhật</button>

@@ -28,7 +28,6 @@
                     <tr>
                         <th>#ID</th>
                         <th>Tên thẻ</th>
-                        <th>Loại thẻ</th>
                         <th>Ngày tạo</th>
                         <th>Cài đặt</th>
                     </tr>
@@ -43,9 +42,7 @@
                                     </a>
                                 </td>
                                 <td>{{ $item->name }}</td>
-                                <td class=""><span
-                                        class="badge  me-1 {{ $item->type == 'product' ? 'bg-label-info ' : ' bg-label-warning' }}">{{ $item->type == 'product' ? 'Sản phẩm' : 'Tin tức' }}</span>
-                                </td>
+
                                 <td>
                                     {{ $item->created_at->format('d-m-Y') ?? '' }}
                                 </td>

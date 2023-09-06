@@ -66,8 +66,8 @@
                             <div class="mb-3 col-md-6">
                                 <label for="product_code" class="form-label">Mã sản phẩm:</label>
                                 <input class="form-control @error('product_code') is-invalid @enderror " type="text"
-                                    oninput="createSlug('product_code','slug')" id="product_code" name="product_code"
-                                    value="{{ old('product_code') }}" placeholder="Mã sản phẩm" />
+                                    id="product_code" name="product_code" value="{{ old('product_code') }}"
+                                    placeholder="Mã sản phẩm" />
                                 @error('product_code')
                                     <p class="text-danger my-1">{{ $message }}</p>
                                 @enderror
@@ -76,8 +76,8 @@
                             <div class="mb-3 col-md-6">
                                 <label for="product_sku" class="form-label">Mã SKU:</label>
                                 <input class="form-control @error('product_sku') is-invalid @enderror " type="text"
-                                    oninput="createSlug('product_sku','slug')" id="product_sku" name="product_sku"
-                                    value="{{ old('product_sku') }}" placeholder="Mã SKU" />
+                                    id="product_sku" name="product_sku" value="{{ old('product_sku') }}"
+                                    placeholder="Mã SKU" />
                                 @error('product_sku')
                                     <p class="text-danger my-1">{{ $message }}</p>
                                 @enderror
@@ -85,8 +85,7 @@
                             <div class="mb-3 col-md-6">
                                 <label for="quantity" class="form-label">Số lượng:</label>
                                 <input class="form-control @error('quantity') is-invalid @enderror " type="text"
-                                    oninput="createSlug('quantity','slug')" id="quantity" name="quantity"
-                                    value="{{ old('quantity') }}" placeholder="Số lượng" />
+                                    id="quantity" name="quantity" value="{{ old('quantity') }}" placeholder="Số lượng" />
                                 @error('quantity')
                                     <p class="text-danger my-1">{{ $message }}</p>
                                 @enderror
@@ -97,8 +96,7 @@
                                     id="category_id">
                                     <option value="">Vui lòng lựa chọn</option>
                                     @foreach (getAllCategories() as $category)
-                                        <option {{ old('category_id') == $category->id ? 'selected' : '' }}
-                                            value="{{ $category->id }}">
+                                        <option {{ old('category_id') == $category->id ? 'selected' : '' }} value="{{ $category->id }}">
                                             {{ $category->name }} -
                                             {{ $category->type == 'product' ? 'Sản phẩm' : 'Tin tức' }}</option>
                                     @endforeach
@@ -110,40 +108,52 @@
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="select-multiple" class="form-label">Màu sắc:</label>
-                                <select id="select-multiple" multiple name="colors" placeholder="Chọn màu sắc"
-                                    data-search="true" data-silent-initial-value-set="true">
+                                <select id="select-multiple" class="@error('colors') is-invalid @enderror" multiple
+                                    name="colors" placeholder="Chọn màu sắc" data-search="true"
+                                    data-silent-initial-value-set="true">
                                     @foreach (getAllColors() as $color)
                                         <option value="{{ $color->name }}-{{ $color->code }}">{{ $color->name }}
                                         </option>
                                     @endforeach
 
                                 </select>
+                                @error('colors')
+                                    <p class="text-danger my-1">{{ $message }}</p>
+                                @enderror
                             </div>
                             <div class="mb-3 col-md-6">
                                 <label for="select-multiple" class="form-label">Kích thước:</label>
-                                <select id="select-multiple" multiple name="sizes" placeholder="Chọn Kích thước"
-                                    data-search="true" data-silent-initial-value-set="true">
+                                <select id="select-multiple" class="@error('sizes') is-invalid @enderror" multiple
+                                    name="sizes" placeholder="Chọn Kích thước" data-search="true"
+                                    data-silent-initial-value-set="true">
                                     @foreach (getAllSizes() as $size)
                                         <option value="{{ $size->name }}">{{ $size->name }}
                                         </option>
                                     @endforeach
 
                                 </select>
+                                @error('sizes')
+                                    <p class="text-danger my-1">{{ $message }}</p>
+                                @enderror
                             </div>
 
 
-                            <div class="mb-3 col-md-6">
+                            <div class="mb-3 col-md-12">
                                 <label for="select-multiple" class="form-label">Giới tính:</label>
-                                <select id="select-multiple" multiple name="genders" placeholder="Chọn giới tính"
-                                    data-search="false" data-silent-initial-value-set="true">
+                                <select id="select-multiple" class="@error('genders') is-invalid @enderror" multiple
+                                    name="genders" placeholder="Chọn giới tính" data-search="false"
+                                    data-silent-initial-value-set="true">
                                     <option value="male">Nam
                                     </option>
                                     <option value="female">Nữ
                                     </option>
 
                                 </select>
+                                @error('genders')
+                                    <p class="text-danger my-1">{{ $message }}</p>
+                                @enderror
                             </div>
-                            <div class="mb-3 col-md-6">
+                            {{-- <div class="mb-3 col-md-6">
                                 <label for="select-multiple" class="form-label">Tags:</label>
                                 <select id="select-multiple" multiple name="tags" placeholder="Chọn thẻ"
                                     data-search="true" data-silent-initial-value-set="true">
@@ -153,12 +163,12 @@
                                     @endforeach
 
                                 </select>
-                            </div>
+                            </div> --}}
                             <div class="mb-3 col-md-6">
                                 <label for="regular_price" class="form-label">Giá thường ("Giá bán công khai"):</label>
                                 <div class="input-group input-group-merge">
                                     <span class="input-group-text">$</span>
-                                    <input type="text"name="regular_price" class="form-control" placeholder="0.000">
+                                    <input type="text"name="regular_price"  value="{{ old('regular_price') }}" class="form-control" placeholder="0.000">
                                     <span class="input-group-text">VND</span>
                                 </div>
                                 @error('regular_price')
@@ -166,13 +176,12 @@
                                 @enderror
                             </div>
                             <div class="mb-3 col-md-6">
-                                <label for="sale_price" class="form-label">Giá sale:</label>
+                                <label for="sale" class="form-label">Sale (%):</label>
                                 <div class="input-group input-group-merge">
-                                    <span class="input-group-text">$</span>
-                                    <input type="text" name="sale_price" class="form-control" placeholder="0.000">
-                                    <span class="input-group-text">VND</span>
+                                    <span class="input-group-text">%</span>
+                                    <input type="text" name="sale" class="form-control" value="{{ old('sale') }}" placeholder="0.000">
                                 </div>
-                                @error('sale_price')
+                                @error('sale')
                                     <p class="text-danger my-1">{{ $message }}</p>
                                 @enderror
                             </div>
@@ -185,7 +194,7 @@
                                 <label for="tax" class="form-label">Thuế (%):</label>
                                 <div class="input-group input-group-merge">
                                     <span class="input-group-text">%</span>
-                                    <input type="text" name="tax" class="form-control" placeholder="0.00">
+                                    <input type="text" name="tax" class="form-control" value="{{ old('tax') }}" placeholder="0.00">
                                 </div>
                                 @error('tax')
                                     <p class="text-danger my-1">{{ $message }}</p>

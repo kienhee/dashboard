@@ -29,26 +29,12 @@
                     <form action="{{ route('dashboard.tag.store') }}" method="POST">
                         @csrf
                         <div class="row ">
-                            <div class="mb-3 col-md-6">
+                            <div class="mb-3 col-md-12">
                                 <label for="name" class="form-label">Tên thẻ:</label>
                                 <input class="form-control @error('name') is-invalid @enderror " type="text"
                                     id="name" name="name" value="{{ old('name') }}"
                                     placeholder="VD: Fashion, Brand, Gender" autofocus />
                                 @error('name')
-                                    <p class="text-danger my-1">{{ $message }}</p>
-                                @enderror
-                            </div>
-                            <div class="mb-3 col-md-6">
-                                <label for="type" class="form-label">Loại thẻ:</label>
-                                <select class="form-select @error('type') is-invalid @enderror" name="type"
-                                    id="type">
-                                    <option value="">Vui lòng lựa chọn</option>
-                                    <option value="product" {{ old('type') == 'product' ? 'selected' : '' }}>Dành
-                                        cho sản phẩm</option>
-                                    <option value="blog" {{ old('type') == 'blog' ? 'selected' : '' }}>Dành cho
-                                        tin tức</option>
-                                </select>
-                                @error('type')
                                     <p class="text-danger my-1">{{ $message }}</p>
                                 @enderror
                             </div>

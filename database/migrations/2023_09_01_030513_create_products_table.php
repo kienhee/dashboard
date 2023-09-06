@@ -24,12 +24,11 @@ return new class extends Migration
             $table->integer('quantity');
             $table->string('colors')->nullable();
             $table->string('sizes')->nullable();
-            $table->string('tags');
             $table->string('genders');
             $table->string('regular_price');
-            $table->string('sale_price');
+            $table->tinyInteger('sale')->nullable();
             $table->boolean('is_Price_includes_taxes')->default(false);
-            $table->integer('tax')->nullable();
+            $table->tinyInteger('sale')->nullable();
             $table->boolean('isPublish')->default(true);
             $table->softDeletes();
             $table->timestamp('created_at')->useCurrent();

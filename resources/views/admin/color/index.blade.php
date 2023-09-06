@@ -43,9 +43,10 @@
                                     </a>
                                 </td>
                                 <td>{{ $item->name }}</td>
-                                <td class="d-flex align-items-center gap-1">
-                                    <span>{{ $item->code }} </span><span
-                                        style="display:inline-block;width:15px;height:15px;border-radius:2px;background-color:{{ $item->code }}"></span>
+                                <td class="d-flex align-items-center gap-2">
+                                    <span>{{ $item->code }} </span>
+                                    <span class="w-px-20 h-px-20  d-inline-block"
+                                        style="border-radius:2px;background-color:{{ $item->code }}"></span>
                                 </td>
                                 <td>
                                     {{ $item->created_at->format('d-m-Y') ?? '' }}

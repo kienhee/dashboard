@@ -22,12 +22,10 @@ class TagController extends Controller
 
         $validate = $request->validate([
             'name' => 'required|max:50|unique:tags,name',
-            'type' => 'required',
         ], [
             "name.required" => "Vui lòng nhập trường này",
             "name.unique" => "Tên này đã tồn tại!",
             "name.max" => "Tối đa :max kí tự",
-            "type.required" => "Vui lòng loại thẻ",
         ]);
 
         $check = Tag::insert($validate);
@@ -45,12 +43,10 @@ class TagController extends Controller
 
         $validate = $request->validate([
             'name' => 'required|max:50|unique:tags,name,' . $id,
-            'type' => 'required',
         ], [
             "name.required" => "Vui lòng nhập trường này",
             "name.unique" => "Tên này đã tồn tại!",
             "name.max" => "Tối đa :max kí tự",
-            "type.required" => "Vui lòng loại thẻ",
         ]);
 
         $check = Tag::where('id', $id)->update($validate);
