@@ -1,8 +1,8 @@
 @extends('layouts.admin.index')
-@section('title', 'Quản lí bảng màu')
+@section('title', 'Quản lý bảng màu')
 
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lí bảng màu/</span> Danh sách bảng màu</h4>
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý bảng màu/</span> Danh sách bảng màu</h4>
     <div class="card">
         @if (session('msgSuccess'))
             <div class=" mt-3 mx-3 alert alert-success alert-dismissible" role="alert">

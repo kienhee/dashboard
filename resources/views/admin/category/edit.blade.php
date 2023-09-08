@@ -2,7 +2,7 @@
 @section('title', 'Cập nhật danh mục')
 
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lí danh mục /</span> Cập nhật danh mục</h4>
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý danh mục /</span> Cập nhật danh mục</h4>
     <div class="row">
         <div class="col-md-12">
             <div class="card mb-4">
@@ -26,7 +26,8 @@
                 <hr class="my-0" />
                 <!-- Account -->
                 <div class="card-body">
-                    <form id="formAccountSettings" action="{{ route('dashboard.category.update',$category->id) }}" method="POST">
+                    <form id="formAccountSettings" action="{{ route('dashboard.category.update', $category->id) }}"
+                        method="POST">
                         @csrf
                         @method('put')
                         <div class="row">
@@ -54,7 +55,9 @@
                                 <select class="form-select @error('category_id') is-invalid @enderror" name="category_id"
                                     id="category_id">
                                     <option value="">Vui lòng lựa chọn</option>
-                                    <option value="0"  {{ $category->category_id == 0 || old('category_id') == 0 ? 'selected' : '' }}>Danh mục gốc</option>
+                                    <option value="0"
+                                        {{ $category->category_id == 0 || old('category_id') == 0 ? 'selected' : '' }}>Danh
+                                        mục gốc</option>
                                     @foreach (getAllCategories() as $item)
                                         <option
                                             {{ $category->category_id == $item->id || old('category_id') == $item->id ? 'selected' : '' }}
@@ -89,7 +92,7 @@
                                 <label for="description" class="form-label">Mô tả:</label>
 
                                 <textarea class="form-control @error('description') is-invalid @enderror " id="description" rows="3"
-                                    name="description" placeholder="Mô tả danh mục">{{$category->description ?? old('description') }}</textarea>
+                                    name="description" placeholder="Mô tả danh mục">{{ $category->description ?? old('description') }}</textarea>
                                 @error('description')
                                     <p class="text-danger my-1">{{ $message }}</p>
                                 @enderror

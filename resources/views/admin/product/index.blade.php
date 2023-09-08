@@ -1,8 +1,8 @@
 @extends('layouts.admin.index')
-@section('title', 'Quản lý người dùng')
+@section('title', 'Quản lý sản phẩm')
 
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý người dùng/</span> Danh sách người dùng</h4>
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý sản phẩm/</span> Danh sách sản phẩm</h4>
     <div class="card">
         @if (session('msgSuccess'))
             <div class=" mt-3 mx-3 alert alert-success alert-dismissible" role="alert">
@@ -35,7 +35,7 @@
 
                 <div class="col-md-6 col-lg-3 mb-2">
                     <select class="form-select" name="group_id">
-                        <option value="">Nhóm người dùng</option>
+                        <option value="">Nhóm sản phẩm</option>
                         @foreach (getAllGroups() as $group)
                             <option {{ Request()->group_id == $group->id ? 'selected' : '' }} value="{{ $group->id }}">
                                 {{ $group->name }}</option>
@@ -69,46 +69,42 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>#ID</th>
-                        <th>Họ và tên</th>
-                        <th>Email</th>
-                        <th>Nhóm người dùng</th>
-                        <th>SDT</th>
-                        <th>Trạng thái</th>
-                        <th>Active Email</th>
-                        <th>Ngày tạo</th>
-                        <th>Cài đặt</th>
+                        <th class="px-1 text-center" style="width: 50px">#ID</th>
+                        <th class="px-1 text-center" style="width: 50px"></th>
+                        <th>Tên sản phẩm</th>
+                        <th class="px-1 text-center" style="width: 130px">Trạng thái</th>
+                        <th class="px-1 text-center" style="width: 130px">Số lượng</th>
+                        <th class="px-1 text-center" style="width: 130px">Cài đặt</th>
                     </tr>
                 </thead>
                 <tbody class="table-border-bottom-0">
-                    @if ($users->count() > 0)
-
-                        @foreach ($users as $item)
+                    @if ($products->count() > 0)
+                        @foreach ($products as $item)
                             <tr>
-                                <td><i class="fab fa-angular fa-lg text-danger "></i> <a
-                                        href="{{ route('dashboard.user.edit', $item->id) }}"><strong>#{{ $item->id }}</strong>
+                                <td class="px-0 text-center">
+                                    <a href="{{ route('dashboard.product.edit', $item->id) }}"
+                                        style="color: inherit"><strong>{{ $item->id }}</strong>
                                     </a>
                                 </td>
-                                <td>{{ $item->full_name }}</td>
-                                <td>
-                                    {{ $item->email }}
+                                <td class="px-0 text-center">
+                                    <img src="{{ json_decode($item->images)[0] ?? '' }}" alt="Ảnh"
+                                        class=" object-fit-cover border rounded w-px-40 h-px-40">
                                 </td>
                                 <td>
-                                    {{ $item->group->name ?? '' }}
+                                    <a href="{{ route('dashboard.product.edit', $item->id) }}" style="color: inherit    ">
+                                        {{ $item->name }}
+                                    </a>
                                 </td>
-                                <td>
-                                    {{ $item->phone_number }}
+
+
+                                <td class="px-0 text-center"><span
+                                        class="badge  me-1 {{ $item->deleted_at == null ? 'bg-label-success ' : ' bg-label-primary' }}">{{ $item->deleted_at == null ? 'Công khai' : 'Tạm ẩn' }}</span>
                                 </td>
-                                <td><span
-                                        class="badge  me-1 {{ $item->deleted_at == null ? 'bg-label-success ' : ' bg-label-primary' }}">{{ $item->deleted_at == null ? 'Hoạt động' : 'Ngừng hoạt động' }}</span>
+                                <td class="text-center px-0">
+                                    {{ $item->quantity }}
                                 </td>
-                                <td><span
-                                        class="badge  me-1 {{ $item->email_verified_at == null ? ' bg-label-primary' : 'bg-label-success' }}">{{ $item->email_verified_at == null ? 'Chưa kích hoạt' : 'Đã kích hoạt' }}</span>
-                                </td>
-                                <td>
-                                    {{ $item->created_at->format('d-m-Y') ?? '' }}
-                                </td>
-                                <td class="text-center">
+
+                                <td class="px-0 text-center">
                                     <div class="dropdown">
                                         <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
                                             data-bs-toggle="dropdown">
@@ -116,36 +112,30 @@
                                         </button>
                                         <div class="dropdown-menu">
                                             <a class="dropdown-item"
-                                                href="{{ route('dashboard.user.edit', $item->id) }}"><i
+                                                href="{{ route('dashboard.product.edit', $item->id) }}"><i
                                                     class="bx bx-edit-alt me-1"></i>
-                                                Sửa thông tin</a>
+                                                Xem thêm</a>
 
-                                            @if (Auth::user()->id != $item->id)
-                                                @if ($item->trashed() == 1)
-                                                    <form class="dropdown-item"
-                                                        action="{{ route('dashboard.user.restore', $item->id) }}"
-                                                        method="POST">
-                                                        @csrf
-                                                        @method('delete')
-                                                        <button class="btn p-0  w-100 text-start" type="submit">
-                                                            <i class='bx bx-revision'></i>
-                                                            Khôi phục hoạt động
-                                                        </button>
-                                                    </form>
-                                                @endif
-                                                <form class="dropdown-item"
-                                                    action="{{ $item->trashed() ? route('dashboard.user.force-delete', $item->id) : route('dashboard.user.soft-delete', $item->id) }}"
-                                                    method="POST"
-                                                    @if ($item->trashed()) onsubmit="return confirm('Bạn chắc chắn muốn xóa vĩnh viễn?')" @endif>
-                                                    @csrf
-                                                    @method('delete')
-                                                    <button class="btn p-0  w-100 text-start" type="submit">
-                                                        <i
-                                                            class="bx {{ $item->trashed() ? 'bx-trash' : 'bx bxs-hand' }}  me-1"></i>
-                                                        {{ $item->trashed() ? 'Xóa vĩnh viễn' : 'Tạm ngưng hoạt động' }}
-                                                    </button>
-                                                </form>
-                                            @endif
+                                            {{-- @if (Auth::user()->id != $item->id)
+                                @if ($item->trashed() == 1)
+                                <form class="dropdown-item" action="{{ route('dashboard.user.restore', $item->id) }}" method="POST">
+                                    @csrf
+                                    @method('delete')
+                                    <button class="btn p-0  w-100 text-start" type="submit">
+                                        <i class='bx bx-revision'></i>
+                                        Khôi phục hoạt động
+                                    </button>
+                                </form>
+                                @endif
+                                <form class="dropdown-item" action="{{ $item->trashed() ? route('dashboard.user.force-delete', $item->id) : route('dashboard.user.soft-delete', $item->id) }}" method="POST" @if ($item->trashed()) onsubmit="return confirm('Bạn chắc chắn muốn xóa vĩnh viễn?')" @endif>
+                                    @csrf
+                                    @method('delete')
+                                    <button class="btn p-0  w-100 text-start" type="submit">
+                                        <i class="bx {{ $item->trashed() ? 'bx-trash' : 'bx bxs-hand' }}  me-1"></i>
+                                        {{ $item->trashed() ? 'Xóa vĩnh viễn' : 'Tạm ngưng hoạt động' }}
+                                    </button>
+                                </form>
+                                @endif --}}
 
                                         </div>
                                     </div>
@@ -164,7 +154,7 @@
             </table>
         </div>
         <div class="mx-3 mt-3">
-            {{ $users->withQueryString()->links() }}
+            {{ $products->withQueryString()->links() }}
         </div>
     </div>
 @endsection

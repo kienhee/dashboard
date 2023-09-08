@@ -8,12 +8,44 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    public function index(Request $request)
+    {
+        $result = Product::query();
+
+        if ($request->has('keywords') && $request->keywords != null) {
+            $result->where('full_name', 'like', '%' . $request->keywords . '%')
+                ->orWhere('email', 'like', '%' . $request->keywords . '%')
+                ->orWhere('phone_number', 'like', '%' . $request->keywords . '%');
+        }
+
+        if ($request->has('group_id') && $request->group_id != null) {
+            $result->where('group_id', $request->group_id);
+        }
+        if ($request->has('sort') && $request->sort != null) {
+            $result->orderBy('created_at', $request->sort);
+        } else {
+            $result->orderBy('created_at', 'desc');
+        }
+        if ($request->has('status') && $request->status != null && $request->status == 'active') {
+            $result->where('deleted_at', "=", null);
+        }
+        //  elseif ($request->has('status') && $request->status != null && $request->status == 'inactive') {
+        //     $result->onlyTrashed();
+        // } else {
+        //     $result->withTrashed();
+        // }
+        $products = $result->paginate(10);
+        return view('admin.product.index', compact('products'));
+    }
+
     public function add()
     {
         return view('admin.product.add');
     }
     public function store(Request $request)
     {
+
+
         if ($request->has('is_Price_includes_taxes')) {
             $request['is_Price_includes_taxes'] = 1;
         } else {
@@ -22,7 +54,7 @@ class ProductController extends Controller
         if ($request->tax == null) {
             $request['tax'] = 0;
         }
-        // dd($request->all());
+
 
         $validate = $request->validate([
             "name" => "required|max:255|unique:products,name",
@@ -39,6 +71,7 @@ class ProductController extends Controller
             "regular_price" => "required|numeric",
             "sale" => "required|numeric|max_digits:2",
             "tax" => "numeric|max_digits:2",
+            "images" => "required"
         ], [
             "name.required" => "Vui lòng nhập trường này!",
             "slug.required" => "Vui lòng nhập trường này!",
@@ -51,6 +84,7 @@ class ProductController extends Controller
             "colors.required" => "Vui lòng nhập trường này!",
             "sizes.required" => "Vui lòng nhập trường này!",
             "genders.required" => "Vui lòng nhập trường này!",
+            "images.required" => "Vui lòng thêm ảnh cho sản phẩm",
             "regular_price.required" => "Vui lòng nhập trường này!",
             "sale.required" => "Vui lòng nhập trường này!",
             "tax.required" => "Vui lòng nhập trường này!",
@@ -66,10 +100,30 @@ class ProductController extends Controller
             "slug.unique" => "Đường dẫn này đã được sử dụng",
 
         ]);
+        $images = [];
+        $files = $request->file('images');
+
+        if ($files) {
+            $newFiles =  array_slice($files, 0, 9);
+            foreach ($newFiles as $file) {
+                $path_img = $file->store('public/photos/1');
+                $name = str_replace("public", getenv('APP_URL') . "/storage", $path_img);
+                $images[] = $name;
+            }
+        }
+        $validate['images'] = json_encode($images);
         $check = Product::insert($validate);
         if ($check) {
             return back()->with('msgSuccess', 'Thêm thành công');
         }
         return back()->with('msgError', 'Thêm thất bại!');
+    }
+    public function edit(Product $product)
+    {
+        return view('admin.product.edit', compact('product'));
+    }
+    public function update(Request $request)
+    {
+        dd($request->all());
     }
 }

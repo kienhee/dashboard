@@ -2,7 +2,7 @@
 @section('title', 'Thêm mới danh mục')
 
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lí danh mục /</span> Thêm mới danh mục</h4>
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý danh mục /</span> Thêm mới danh mục</h4>
     <div class="row">
         <div class="col-md-12">
             <div class="card mb-4">
@@ -31,9 +31,9 @@
                         <div class="row">
                             <div class="mb-3 col-md-6">
                                 <label for="name" class="form-label">Tên danh mục:</label>
-                                <input class="form-control @error('name') is-invalid @enderror " type="text" oninput="createSlug('name','slug')"
-                                    id="name" name="name" value="{{ old('name') }}" placeholder="Tên danh mục"
-                                    autofocus />
+                                <input class="form-control @error('name') is-invalid @enderror " type="text"
+                                    oninput="createSlug('name','slug')" id="name" name="name"
+                                    value="{{ old('name') }}" placeholder="Tên danh mục" autofocus />
                                 @error('name')
                                     <p class="text-danger my-1">{{ $message }}</p>
                                 @enderror
@@ -83,7 +83,7 @@
                                 <label for="description" class="form-label">Mô tả:</label>
 
                                 <textarea class="form-control @error('description') is-invalid @enderror " id="description" rows="3"
-                                  name="description"   placeholder="Mô tả danh mục">{{ old('description') }}</textarea>
+                                    name="description" placeholder="Mô tả danh mục">{{ old('description') }}</textarea>
                                 @error('description')
                                     <p class="text-danger my-1">{{ $message }}</p>
                                 @enderror

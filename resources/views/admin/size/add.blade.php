@@ -2,7 +2,7 @@
 @section('title', 'Thêm kích thước')
 
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lí kích thước /</span> Thêm kích thước</h4>
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý kích thước /</span> Thêm kích thước</h4>
     <div class="row">
         <div class="col-md-12">
             <div class="card mb-4">

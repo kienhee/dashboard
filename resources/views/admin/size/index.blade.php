@@ -1,8 +1,8 @@
 @extends('layouts.admin.index')
-@section('title', 'Quản lí kích thước')
+@section('title', 'Quản lý kích thước')
 
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lí kích thước/</span> Danh sách kích thước</h4>
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý kích thước/</span> Danh sách kích thước</h4>
     <div class="card">
         @if (session('msgSuccess'))
             <div class=" mt-3 mx-3 alert alert-success alert-dismissible" role="alert">
@@ -52,8 +52,7 @@
                                             <i class="bx bx-dots-vertical-rounded"></i>
                                         </button>
                                         <div class="dropdown-menu">
-                                            <a class="dropdown-item"
-                                                href="{{ route('dashboard.size.edit', $item->id) }}"><i
+                                            <a class="dropdown-item" href="{{ route('dashboard.size.edit', $item->id) }}"><i
                                                     class="bx bx-edit-alt me-1"></i>
                                                 Sửa thông tin</a>
                                             <form class="dropdown-item"

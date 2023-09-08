@@ -29,7 +29,7 @@ Route::get('/', function () {
 });
 Route::prefix('/dashboard')->name('dashboard.')->middleware('auth')->group(function () {
     Route::get('/', [DashboardController::class, "dashboard"])->name('index');
-    // Quản lí danh mục
+    // Quản lý danh mục
     Route::prefix('categories')->name('category.')->group(function () {
         Route::get('/', [CategoryController::class, 'index'])->name('index');
         Route::get('/add', [categoryController::class, 'add'])->name('add');
@@ -41,11 +41,11 @@ Route::prefix('/dashboard')->name('dashboard.')->middleware('auth')->group(funct
         Route::delete('/restore/{id}', [categoryController::class, 'restore'])->name('restore');
     });
     Route::prefix('products')->name('product.')->group(function () {
-        // Route::get('/', [ProductController::class, 'index'])->name('index');
+        Route::get('/', [ProductController::class, 'index'])->name('index');
         Route::get('/add', [ProductController::class, 'add'])->name('add');
         Route::post('/add', [ProductController::class, 'store'])->name('store');
-        // Route::get('/edit/{product}', [ProductController::class, 'edit'])->name('edit');
-        // Route::put('/edit/{id}', [ProductController::class, 'update'])->name('update');
+        Route::get('/edit/{product}', [ProductController::class, 'edit'])->name('edit');
+        Route::put('/edit/{id}', [ProductController::class, 'update'])->name('update');
         // Route::delete('/soft-delete/{id}', [ProductController::class, 'softDelete'])->name('soft-delete');
         // Route::delete('/force-delete/{id}', [ProductController::class, 'forceDelete'])->name('force-delete');
         // Route::delete('/restore/{id}', [ProductController::class, 'restore'])->name('restore');
@@ -74,7 +74,7 @@ Route::prefix('/dashboard')->name('dashboard.')->middleware('auth')->group(funct
         Route::put('/edit/{id}', [TagController::class, 'update'])->name('update');
         Route::delete('/delete/{id}', [TagController::class, 'delete'])->name('delete');
     });
-    // Quản lí nhóm người dùng
+    // Quản lý nhóm người dùng
     Route::prefix('groups')->name('group.')->group(function () {
         Route::get('/', [GroupController::class, 'index'])->name('index');
         Route::get('/add', [GroupController::class, 'add'])->name('add');
@@ -84,7 +84,7 @@ Route::prefix('/dashboard')->name('dashboard.')->middleware('auth')->group(funct
 
         Route::delete('/delete/{id}', [GroupController::class, 'delete'])->name('delete');
     });
-    // Quản lí người dùng
+    // Quản lý người dùng
     Route::prefix('users')->name('user.')->group(function () {
         Route::get('/', [UserController::class, 'index'])->name('index');
         Route::get('/add', [UserController::class, 'add'])->name('add');

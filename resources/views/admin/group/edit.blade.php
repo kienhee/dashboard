@@ -2,7 +2,7 @@
 @section('title', 'Sửa thông tin nhóm')
 
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lí nhóm /</span> Sửa thông tin nhóm</h4>
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý nhóm /</span> Sửa thông tin nhóm</h4>
     <div class="row">
         <div class="col-md-12">
             <div class="card mb-4">
@@ -26,7 +26,7 @@
                 <hr class="my-0" />
                 <!-- Account -->
                 <div class="card-body">
-                    <form id="formAccountSettings" action="{{ route('dashboard.group.update',$group->id) }}" method="POST">
+                    <form id="formAccountSettings" action="{{ route('dashboard.group.update', $group->id) }}" method="POST">
                         @csrf
                         @method('put')
                         <div class="row">

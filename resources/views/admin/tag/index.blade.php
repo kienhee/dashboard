@@ -1,8 +1,8 @@
 @extends('layouts.admin.index')
-@section('title', 'Quản lí thẻ')
+@section('title', 'Quản lý thẻ')
 
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lí thẻ/</span> Danh sách thẻ</h4>
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý thẻ/</span> Danh sách thẻ</h4>
     <div class="card">
         @if (session('msgSuccess'))
             <div class=" mt-3 mx-3 alert alert-success alert-dismissible" role="alert">

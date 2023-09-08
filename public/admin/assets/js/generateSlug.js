@@ -75,7 +75,7 @@ function removeDiacritics(inputString) {
     );
 }
 
-// Xử lí onchang slug - SEO thân thiện
+// Xử lý onchang slug - SEO thân thiện
 function generateSlug(inputText) {
     return removeDiacritics(
         inputText

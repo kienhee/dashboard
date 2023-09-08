@@ -2,7 +2,7 @@
 @section('title', 'Danh sách nhóm người dùng')
 
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lí nhóm /</span> Danh sách nhóm người dùng</h4>
+    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý nhóm /</span> Danh sách nhóm người dùng</h4>
     <div class="card">
         @if (session('msgSuccess'))
             <div class=" mt-3 mx-3 alert alert-success alert-dismissible" role="alert">
