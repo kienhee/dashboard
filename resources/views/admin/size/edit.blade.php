@@ -1,29 +1,18 @@
+@php
+    $moduleName = 'kích thước';
+@endphp
 @extends('layouts.admin.index')
-@section('title', 'Cập nhật')
+@section('title', 'Cập nhật ' . $moduleName)
 
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý bảng màu /</span> Cập nhật</h4>
+    <x-breadcrumb parentName="Quản lý {{ $moduleName }}" parentLink="dashboard.size.index"
+        childrenName="Cập nhật {{ $moduleName }}" />
     <div class="row">
         <div class="col-md-12">
             <div class="card mb-4">
-                @if (session('msgSuccess'))
-                    <div class=" mt-3 mx-3 alert alert-success alert-dismissible" role="alert">
-                        {{ session('msgSuccess') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-                @if (session('msgError'))
-                    <div class="mt-3 mx-3  alert alert-danger alert-dismissible" role="alert">
-                        {{ session('msgError') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-                <div class="d-flex justify-content-between align-items-center mx-3">
-                    <h5 class="card-header px-0">Cập nhật</h5>
-                    <a href="{{ route('dashboard.size.index') }}" class="btn btn-outline-primary btn-sm">Danh sách màu
-                    </a>
-                </div>
-                <hr class="my-0" />
+                <x-alert />
+                <x-header-table tableName="Cập nhật {{ $moduleName }}" link="dashboard.size.index"
+                    linkName="Danh sách {{ $moduleName }}" />
                 <!-- Account -->
                 <div class="card-body">
                     <form action="{{ route('dashboard.size.update', $size->id) }}" method="POST">
@@ -42,7 +31,7 @@
 
                         </div>
                         <div class="mt-2">
-                            <button type="submit" class="btn btn-primary me-2">Cập nhật</button>
+                            <button type="submit" class="btn btn-primary me-2">Cập nhật {{ $moduleName }}</button>
                             <button type="reset" class="btn btn-outline-secondary">Đặt lại</button>
                         </div>
                     </form>

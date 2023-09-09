@@ -10,7 +10,7 @@
             window.open(
                 route_prefix + "?type=" + type,
                 "FileManager",
-                "width=900,height=600"
+                "width=1000,height=600"
             );
             window.SetUrl = function (items) {
                 var file_path = items
@@ -29,9 +29,7 @@
                 items.forEach(function (item) {
                     target_preview.append(
                         $("<img>")
-                            .css("height", "10rem")
-                            .css("width", "10rem")
-                            .css("border-radius", "5px")
+                            .addClass("preview-img")
                             .attr("src", item.thumb_url)
                     );
                 });

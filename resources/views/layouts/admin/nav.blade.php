@@ -23,10 +23,20 @@
             <!-- User -->
             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                    <div class="avatar avatar-online">
-                        <img src="{{ Auth::user()->avatar ?? asset('images/avatar-default.png') }} " alt="avatar"
-                            class="w-px-40 h-px-40 rounded-circle" style="object-fit: cover" />
+                    <div class="d-flex">
+
+                        <div class="flex-grow-1 me-3">
+                            <span class="fw-semibold d-block">{{ Auth::user()->full_name }}</span>
+                            <small class="text-muted  text-right">Admin</small>
+                        </div>
+                        <div class="flex-shrink-0 ">
+                            <div class="avatar avatar-online">
+                                <img src="{{ Auth::user()->avatar ?? asset('images/avatar-default.png') }} "
+                                    alt="avatar" class="w-px-40 h-px-40 rounded-circle" style="object-fit: cover" />
+                            </div>
+                        </div>
                     </div>
+
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li>

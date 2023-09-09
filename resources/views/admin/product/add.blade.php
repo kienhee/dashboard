@@ -1,29 +1,18 @@
+@php
+    $moduleName = 'sản phẩm';
+@endphp
 @extends('layouts.admin.index')
-@section('title', 'Thêm mới sản phẩm')
+@section('title', 'Tạo mới ' . $moduleName)
 
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý sản phẩm /</span> Thêm mới sản phẩm</h4>
+    <x-breadcrumb parentName="Quản lý {{ $moduleName }}" parentLink="dashboard.product.index"
+        childrenName="Tạo mới {{ $moduleName }}" />
     <div class="row">
         <div class="col-md-12">
             <div class="card mb-4">
-                @if (session('msgSuccess'))
-                    <div class=" mt-3 mx-3 alert alert-success alert-dismissible" role="alert">
-                        {{ session('msgSuccess') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-                @if (session('msgError'))
-                    <div class="mt-3 mx-3  alert alert-danger alert-dismissible" role="alert">
-                        {{ session('msgError') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-                <div class="d-flex justify-content-between align-items-center mx-3">
-                    <h5 class="card-header px-0">Thêm mới sản phẩm</h5>
-                    <a href="{{ route('dashboard.category.index') }}" class="btn btn-outline-primary btn-sm">Danh sách sản
-                        phẩm</a>
-                </div>
-                <hr class="my-0" />
+                <x-alert />
+                <x-header-table tableName="Tạo mới {{ $moduleName }}" link="dashboard.product.index"
+                    linkName="Danh sách {{ $moduleName }}" />
                 <!-- Account -->
                 <div class="card-body">
                     <form action="{{ route('dashboard.product.store') }}" method="POST" enctype="multipart/form-data">
@@ -111,8 +100,7 @@
                             <div class="mb-3 col-md-6">
                                 <label for="quantity" class="form-label">Số lượng:</label>
                                 <input class="form-control @error('quantity') is-invalid @enderror " type="text"
-                                    id="quantity" name="quantity" value="{{ old('quantity') }}"
-                                    placeholder="Số lượng" />
+                                    id="quantity" name="quantity" value="{{ old('quantity') }}" placeholder="Số lượng" />
                                 @error('quantity')
                                     <p class="text-danger my-1">{{ $message }}</p>
                                 @enderror
@@ -230,7 +218,7 @@
                             </div>
                         </div>
                         <div class="mt-2">
-                            <button type="submit" class="btn btn-primary me-2">Thêm mới sản phẩm</button>
+                            <button type="submit" class="btn btn-primary me-2">Tạo mới {{ $moduleName }}</button>
                         </div>
                     </form>
                 </div>

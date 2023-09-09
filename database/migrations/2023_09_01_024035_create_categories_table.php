@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('slug');
             $table->string('description')->nullable();
             $table->integer('category_id');
-            $table->string('type', 10);
             $table->softDeletes();
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();

@@ -1,28 +1,18 @@
+@php
+    $moduleName = 'thẻ';
+@endphp
 @extends('layouts.admin.index')
-@section('title', 'Quản lý thẻ')
+@section('title', 'Quản lý ' . $moduleName)
 
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý thẻ/</span> Danh sách thẻ</h4>
+    <x-breadcrumb parentName="Quản lý {{ $moduleName }}" parentLink="dashboard.tag.index"
+        childrenName="Danh sách {{ $moduleName }}" />
     <div class="card">
-        @if (session('msgSuccess'))
-            <div class=" mt-3 mx-3 alert alert-success alert-dismissible" role="alert">
-                {{ session('msgSuccess') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        @endif
-        @if (session('msgError'))
-            <div class="mt-3 mx-3  alert alert-danger alert-dismissible" role="alert">
-                {{ session('msgError') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        @endif
-        <div class="d-flex justify-content-between align-items-center mx-3">
-            <h5 class="card-header px-0">Danh sách thẻ</h5>
-            <a href="{{ route('dashboard.tag.add') }}" class="btn btn-outline-primary btn-sm"> Thêm mới thẻ</a>
-        </div>
-        <hr class="my-0 mb-4" />
+        <x-alert />
+        <x-header-table tableName="Danh sách {{ $moduleName }}" link="dashboard.tag.add"
+            linkName="Tạo {{ $moduleName }}" />
 
-        <div class="table-responsive text-nowrap">
+        <div class="table-responsive text-nowrap mt-4">
             <table class="table">
                 <thead>
                     <tr>
@@ -37,11 +27,12 @@
 
                         @foreach ($tags as $item)
                             <tr>
-                                <td><i class="fab fa-angular fa-lg text-danger "></i> <a
-                                        href="{{ route('dashboard.tag.edit', $item->id) }}"><strong>#{{ $item->id }}</strong>
+                                <td> <a href="{{ route('dashboard.tag.edit', $item->id) }}"><strong>#{{ $item->id }}</strong>
                                     </a>
                                 </td>
-                                <td>{{ $item->name }}</td>
+                                <td> <a href="{{ route('dashboard.tag.edit', $item->id) }}"
+                                        style="color: inherit">{{ $item->name }}
+                                    </a></td>
 
                                 <td>
                                     {{ $item->created_at->format('d-m-Y') ?? '' }}
@@ -79,8 +70,6 @@
                         </tr>
 
                     @endif
-
-
                 </tbody>
             </table>
         </div>

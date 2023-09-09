@@ -1,29 +1,18 @@
+@php
+    $moduleName = 'danh mục';
+@endphp
 @extends('layouts.admin.index')
-@section('title', 'Thêm mới danh mục')
+@section('title', 'Tạo mới ' . $moduleName)
 
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý danh mục /</span> Thêm mới danh mục</h4>
+    <x-breadcrumb parentName="Quản lý {{ $moduleName }}" parentLink="dashboard.category.index"
+        childrenName="Tạo mới {{ $moduleName }}" />
     <div class="row">
         <div class="col-md-12">
             <div class="card mb-4">
-                @if (session('msgSuccess'))
-                    <div class=" mt-3 mx-3 alert alert-success alert-dismissible" role="alert">
-                        {{ session('msgSuccess') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-                @if (session('msgError'))
-                    <div class="mt-3 mx-3  alert alert-danger alert-dismissible" role="alert">
-                        {{ session('msgError') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-                <div class="d-flex justify-content-between align-items-center mx-3">
-                    <h5 class="card-header px-0">Thêm mới danh mục</h5>
-                    <a href="{{ route('dashboard.category.index') }}" class="btn btn-outline-primary btn-sm">Danh sách danh
-                        mục</a>
-                </div>
-                <hr class="my-0" />
+                <x-alert />
+                <x-header-table tableName="Tạo mới {{ $moduleName }}" link="dashboard.category.index"
+                    linkName="Danh sách {{ $moduleName }}" />
                 <!-- Account -->
                 <div class="card-body">
                     <form id="formAccountSettings" action="{{ route('dashboard.category.store') }}" method="POST">
@@ -56,8 +45,7 @@
                                     @foreach (getAllCategories() as $category)
                                         <option {{ old('category_id') == $category->id ? 'selected' : '' }}
                                             value="{{ $category->id }}">
-                                            {{ $category->name }} -
-                                            {{ $category->type == 'product' ? 'Sản phẩm' : 'Tin tức' }}</option>
+                                            {{ $category->name }}</option>
                                     @endforeach
 
                                 </select>
@@ -65,24 +53,11 @@
                                     <p class="text-danger my-1">{{ $message }}</p>
                                 @enderror
                             </div>
-                            <div class="mb-3 col-md-6">
-                                <label for="type" class="form-label">Loại danh mục:</label>
-                                <select class="form-select @error('type') is-invalid @enderror" name="type"
-                                    id="type">
-                                    <option value="">Vui lòng lựa chọn</option>
-                                    <option value="product" {{ old('type') == 'product' ? 'selected' : '' }}>Dành
-                                        cho sản phẩm</option>
-                                    <option value="blog" {{ old('type') == 'blog' ? 'selected' : '' }}>Dành cho
-                                        tin tức</option>
-                                </select>
-                                @error('type')
-                                    <p class="text-danger my-1">{{ $message }}</p>
-                                @enderror
-                            </div>
-                            <div class="col-12">
-                                <label for="description" class="form-label">Mô tả:</label>
 
-                                <textarea class="form-control @error('description') is-invalid @enderror " id="description" rows="3"
+                            <div class=" mb-3 col-md-6">
+                                <label for="description" class="form-label">Mô tả ngắn:</label>
+
+                                <textarea class="form-control @error('description') is-invalid @enderror " id="description" rows="1"
                                     name="description" placeholder="Mô tả danh mục">{{ old('description') }}</textarea>
                                 @error('description')
                                     <p class="text-danger my-1">{{ $message }}</p>
@@ -90,7 +65,7 @@
                             </div>
                         </div>
                         <div class="mt-2">
-                            <button type="submit" class="btn btn-primary me-2">Thêm mới danh mục</button>
+                             <button type="submit" class="btn btn-primary me-2">Tạo mới {{ $moduleName }}</button>
                             <button type="reset" class="btn btn-outline-secondary">Đặt lại</button>
                         </div>
                     </form>

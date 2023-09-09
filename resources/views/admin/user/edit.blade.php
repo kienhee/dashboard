@@ -34,7 +34,7 @@
                                     <input type="file" id="upload" class="account-file-input" hidden name="avatar"
                                         accept="image/png, image/jpeg" />
                                 </label>
-                                <p class="text-muted mb-0">Được phép JPG, GIF hoặc PNG. Kích thước tối đa 800K</p>
+                                <p class="text-muted mb-0">Được phép JPG, PNG.</p>
                             </div>
                         </div>
 

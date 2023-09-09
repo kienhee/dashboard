@@ -1,29 +1,20 @@
+@php
+    $moduleName = 'thẻ';
+@endphp
 @extends('layouts.admin.index')
-@section('title', 'Thêm thẻ')
+@section('title', 'Tạo mới ' . $moduleName)
+
 
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý thẻ /</span> Thêm thẻ</h4>
+    <x-breadcrumb parentName="Quản lý {{ $moduleName }}" parentLink="dashboard.tag.index"
+        childrenName="Tạo mới {{ $moduleName }}" />
+
     <div class="row">
         <div class="col-md-12">
             <div class="card mb-4">
-                @if (session('msgSuccess'))
-                    <div class=" mt-3 mx-3 alert alert-success alert-dismissible" role="alert">
-                        {{ session('msgSuccess') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-                @if (session('msgError'))
-                    <div class="mt-3 mx-3  alert alert-danger alert-dismissible" role="alert">
-                        {{ session('msgError') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-                <div class="d-flex justify-content-between align-items-center mx-3">
-                    <h5 class="card-header px-0">Thêm thẻ</h5>
-                    <a href="{{ route('dashboard.tag.index') }}" class="btn btn-outline-primary btn-sm">Danh sách thẻ
-                    </a>
-                </div>
-                <hr class="my-0" />
+                <x-alert />
+                <x-header-table tableName="Tạo mới {{ $moduleName }}" link="dashboard.tag.index"
+                    linkName="Danh sách {{ $moduleName }}" />
                 <!-- Account -->
                 <div class="card-body">
                     <form action="{{ route('dashboard.tag.store') }}" method="POST">
@@ -40,7 +31,7 @@
                             </div>
                         </div>
                         <div class="mt-2">
-                            <button type="submit" class="btn btn-primary me-2">Thêm thẻ</button>
+                              <button type="submit" class="btn btn-primary me-2">Tạo mới {{ $moduleName }}</button>
                             <button type="reset" class="btn btn-outline-secondary">Đặt lại</button>
                         </div>
                     </form>

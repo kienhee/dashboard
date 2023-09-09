@@ -1,28 +1,16 @@
+@php
+    $moduleName = 'danh mục';
+@endphp
 @extends('layouts.admin.index')
-@section('title', 'Quản lý danh mục')
-
+@section('title', 'Quản lý ' . $moduleName)
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý danh mục/</span> Danh sách danh mục</h4>
+    <x-breadcrumb parentName="Quản lý {{ $moduleName }}" parentLink="dashboard.category.index"
+        childrenName="Danh sách {{ $moduleName }}" />
     <div class="card">
-        @if (session('msgSuccess'))
-            <div class=" mt-3 mx-3 alert alert-success alert-dismissible" role="alert">
-                {{ session('msgSuccess') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        @endif
-        @if (session('msgError'))
-            <div class="mt-3 mx-3  alert alert-danger alert-dismissible" role="alert">
-                {{ session('msgError') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        @endif
-        <div class="d-flex justify-content-between align-items-center mx-3">
-            <h5 class="card-header px-0">Danh sách danh mục</h5>
-            <a href="{{ route('dashboard.category.add') }}" class="btn btn-outline-primary btn-sm"> Thêm mới danh mục</a>
-        </div>
-        <hr class="my-0 mb-4" />
-
-        <form method="GET" class="mx-3 mb-4">
+        <x-alert />
+        <x-header-table tableName="Danh sách {{ $moduleName }}" link="dashboard.category.add"
+            linkName="Tạo {{ $moduleName }}" />
+        <form method="GET" class="mx-3 mb-4 mt-4">
             <div class="row ">
                 <div class="col-md-6 col-lg-3 mb-2">
                     <div class="input-group input-group-merge">
@@ -62,7 +50,6 @@
                         <th>Tên danh mục</th>
                         <th>Mô tả</th>
                         <th>Thuộc danh mục</th>
-                        <th>Loại danh mục</th>
                         <th>Trạng thái</th>
                         <th>Ngày tạo</th>
                         <th>Cài đặt</th>
@@ -73,20 +60,19 @@
 
                         @foreach ($categories as $item)
                             <tr>
-                                <td><i class="fab fa-angular fa-lg text-danger "></i> <a
-                                        href="{{ route('dashboard.category.edit', $item->id) }}"><strong>#{{ $item->id }}</strong>
+                                <td> <a href="{{ route('dashboard.category.edit', $item->id) }}">#{{ $item->id }}
                                     </a>
                                 </td>
-                                <td>{{ $item->name }}</td>
+                                <td><a href="{{ route('dashboard.category.edit', $item->id) }}"
+                                        style="color: inherit"><strong>{{ $item->name }}</strong>
+                                    </a></td>
                                 <td>
                                     {{ $item->description }}
                                 </td>
                                 <td>
                                     {{ $item->group->name ?? '' }}
                                 </td>
-                                <td class="text-center"><span
-                                        class="badge  me-1 {{ $item->type == 'product' ? 'bg-label-info ' : ' bg-label-warning' }}">{{ $item->type == 'product' ? 'Sản phẩm' : 'Tin tức' }}</span>
-                                </td>
+
                                 <td><span
                                         class="badge  me-1 {{ $item->deleted_at == null ? 'bg-label-success ' : ' bg-label-primary' }}">{{ $item->deleted_at == null ? 'Hoạt động' : 'Đang ẩn' }}</span>
                                 </td>

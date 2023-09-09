@@ -45,7 +45,6 @@ class CategoryController extends Controller
             'slug' => 'required|unique:categories,slug',
             'category_id' => 'required|numeric',
             'description' => '',
-            'type' => 'required',
         ], [
             "name.required" => "Vui lòng nhập trường này",
             "name.unique" => "Tên này đã tồn tại!",
@@ -54,7 +53,6 @@ class CategoryController extends Controller
             "slug.unique" => "Đường dẫn này đã tồn tại!",
             "category_id.required" => "Vui lòng lựa chọn",
             "category_id.numeric" => "Giá trị phải là số",
-            "type.required" => "Vui lòng loại danh mục",
         ]);
 
         $check = Category::insert($validate);
@@ -75,7 +73,6 @@ class CategoryController extends Controller
             'slug' => 'required|unique:categories,slug,' . $id,
             'category_id' => 'required|numeric',
             'description' => '',
-            'type' => 'required',
         ], [
             "name.required" => "Vui lòng nhập trường này",
             "name.unique" => "Tên này đã tồn tại!",
@@ -84,7 +81,6 @@ class CategoryController extends Controller
             "slug.unique" => "Đường dẫn này đã tồn tại!",
             "category_id.required" => "Vui lòng lựa chọn",
             "category_id.numeric" => "Giá trị phải là số",
-            "type.required" => "Vui lòng loại danh mục",
         ]);
         $check = Category::where('id', $id)->update($validate);
         if ($check) {

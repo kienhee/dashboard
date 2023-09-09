@@ -1,29 +1,18 @@
+@php
+    $moduleName = 'sản phẩm';
+@endphp
 @extends('layouts.admin.index')
-@section('title', 'Quản lý sản phẩm')
+@section('title', 'Quản lý ' . $moduleName)
 
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý sản phẩm/</span> Danh sách sản phẩm</h4>
+    <x-breadcrumb parentName="Quản lý {{ $moduleName }}" parentLink="dashboard.product.index"
+        childrenName="Danh sách {{ $moduleName }}" />
     <div class="card">
-        @if (session('msgSuccess'))
-            <div class=" mt-3 mx-3 alert alert-success alert-dismissible" role="alert">
-                {{ session('msgSuccess') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        @endif
-        @if (session('msgError'))
-            <div class="mt-3 mx-3  alert alert-danger alert-dismissible" role="alert">
-                {{ session('msgError') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        @endif
-        <div class="d-flex justify-content-between align-items-center mx-3">
-            <h5 class="card-header px-0">Danh sách người
-                dùng </h5>
-            <a href="{{ route('dashboard.user.add') }}" class="btn btn-outline-primary btn-sm"> Thêm mới thành viên</a>
-        </div>
-        <hr class="my-0 mb-4" />
+        <x-alert />
+        <x-header-table tableName="Danh sách {{ $moduleName }}" link="dashboard.product.add"
+            linkName="Tạo {{ $moduleName }}" />
 
-        <form method="GET" class="mx-3 mb-4">
+        <form method="GET" class="mx-3 mb-4 mt-4">
             <div class="row ">
                 <div class="col-md-6 col-lg-3 mb-2">
                     <div class="input-group input-group-merge">

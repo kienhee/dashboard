@@ -1,30 +1,18 @@
+@php
+    $moduleName = 'kích thước';
+@endphp
 @extends('layouts.admin.index')
-@section('title', 'Thêm kích thước')
+@section('title', 'Tạo mới ' . $moduleName)
 
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý kích thước /</span> Thêm kích thước</h4>
+    <x-breadcrumb parentName="Quản lý {{ $moduleName }}" parentLink="dashboard.size.index"
+        childrenName="Tạo mới {{ $moduleName }}" />
     <div class="row">
         <div class="col-md-12">
             <div class="card mb-4">
-                @if (session('msgSuccess'))
-                    <div class=" mt-3 mx-3 alert alert-success alert-dismissible" role="alert">
-                        {{ session('msgSuccess') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-                @if (session('msgError'))
-                    <div class="mt-3 mx-3  alert alert-danger alert-dismissible" role="alert">
-                        {{ session('msgError') }}
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-                @endif
-                <div class="d-flex justify-content-between align-items-center mx-3">
-                    <h5 class="card-header px-0">Thêm kích thước</h5>
-                    <a href="{{ route('dashboard.size.index') }}" class="btn btn-outline-primary btn-sm">Danh sách kích
-                        thước
-                    </a>
-                </div>
-                <hr class="my-0" />
+                <x-alert />
+                <x-header-table tableName="Tạo mới {{ $moduleName }}" link="dashboard.size.index"
+                    linkName="Danh sách {{ $moduleName }}" />
                 <!-- Account -->
                 <div class="card-body">
                     <form action="{{ route('dashboard.size.store') }}" method="POST">
@@ -42,7 +30,7 @@
 
                         </div>
                         <div class="mt-2">
-                            <button type="submit" class="btn btn-primary me-2">Thêm kích thước</button>
+                            <button type="submit" class="btn btn-primary me-2">Tạo mới {{ $moduleName }}</button>
                             <button type="reset" class="btn btn-outline-secondary">Đặt lại</button>
                         </div>
                     </form>
