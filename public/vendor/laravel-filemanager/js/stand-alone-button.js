@@ -31,6 +31,7 @@
                         $("<img>")
                             .css("height", "10rem")
                             .css("width", "10rem")
+                            .css("border-radius", "5px")
                             .attr("src", item.thumb_url)
                     );
                 });

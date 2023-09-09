@@ -131,13 +131,9 @@
     <script src="{{ asset('admin/assets') }}/js/virtual-select.min.js"></script>
     <script src="{{ asset('admin/assets') }}/js/coloris.min.js"></script>
     <script src="{{ asset('admin/assets') }}/js/initTinymce.js"></script>
-    <script src="{{ asset('admin/assets') }}/js/multiplePreview.js"></script>
     <script src="{{ asset('vendor') }}/laravel-filemanager/js/stand-alone-button.js"></script>
     <script>
         $('#lfm').filemanager('image');
-    </script>
-    <script>
-        
     </script>
     <!-- Page JS -->
     <script src="{{ asset('admin/assets') }}/js/dashboards-analytics.js"></script>

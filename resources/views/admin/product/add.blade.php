@@ -29,6 +29,7 @@
                     <form action="{{ route('dashboard.product.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
+
                             <div class="mb-3 col-md-12">
                                 <div class="upload__box">
                                     <label id="lfm" data-input="thumbnail" data-preview="holder"
@@ -38,21 +39,22 @@
                                         <small>(Nên chọn hình tỉ lệ 1:1)</small>
                                     </label>
 
-                                    <input id="thumbnail" class="form-control" type="text" name="images" multiple>
-                                    <div id="holder" class="d-flex justify-content-center gap-3 flex-wrap"></div>
+                                    <input id="thumbnail" class="form-control" type="text" name="images" hidden
+                                        multiple>
+                                    <div id="holder" class="d-flex justify-content-center gap-3 flex-wrap">
+                                        @if (old('images'))
+                                            @foreach (explode(',', old('images')) as $item)
+                                                <img src="{{ $item }}"
+                                                    style="height: 10rem; width: 10rem;object-fit: contain">
+                                            @endforeach
+                                        @endif
+                                    </div>
                                 </div>
-
                                 @error('images')
                                     <p class="text-danger my-1">{{ $message }}</p>
                                 @enderror
                             </div>
-                            <script>
-                                let check = document.getElementById('lfm')
-                                let output = document.getElementById('thumbnail')
-                                output.addEventListener('change', () => {
-                                    console.log(1);
-                                })
-                            </script>
+
                             <div class="mb-3 col-md-6">
                                 <label for="name" class="form-label">Tên sản phẩm:</label>
                                 <input class="form-control @error('name') is-invalid @enderror " type="text"

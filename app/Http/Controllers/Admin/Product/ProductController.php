@@ -44,7 +44,7 @@ class ProductController extends Controller
     }
     public function store(Request $request)
     {
-
+        // dd($request->all());
 
         if ($request->has('is_Price_includes_taxes')) {
             $request['is_Price_includes_taxes'] = 1;
@@ -100,18 +100,18 @@ class ProductController extends Controller
             "slug.unique" => "Đường dẫn này đã được sử dụng",
 
         ]);
-        $images = [];
-        $files = $request->file('images');
+        // $images = [];
+        // $files = $request->file('images');
 
-        if ($files) {
-            $newFiles =  array_slice($files, 0, 9);
-            foreach ($newFiles as $file) {
-                $path_img = $file->store('public/photos/1');
-                $name = str_replace("public", getenv('APP_URL') . "/storage", $path_img);
-                $images[] = $name;
-            }
-        }
-        $validate['images'] = json_encode($images);
+        // if ($files) {
+        //     $newFiles =  array_slice($files, 0, 9);
+        //     foreach ($newFiles as $file) {
+        //         $path_img = $file->store('public/photos/1');
+        //         $name = str_replace("public", getenv('APP_URL') . "/storage", $path_img);
+        //         $images[] = $name;
+        //     }
+        // }
+        // $validate['images'] = json_encode($images);
         $check = Product::insert($validate);
         if ($check) {
             return back()->with('msgSuccess', 'Thêm thành công');

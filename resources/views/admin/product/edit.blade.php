@@ -31,27 +31,25 @@
                         @csrf
                         @method('put')
                         <div class="row">
+
                             <div class="mb-3 col-md-12">
                                 <div class="upload__box">
-                                    <label for="formFileMultiple" class="form-label upload-label mb-3">
+                                    <label id="lfm" data-input="thumbnail" data-preview="holder"
+                                        class="form-label upload-label mb-3">
                                         <p class="mb-0">Thêm hình
                                             ảnh</p>
-                                        <small>(Tối đa <span id="img-length">0</span> / 9 ảnh)</small>
+                                        <small>(Nên chọn hình tỉ lệ 1:1)</small>
                                     </label>
-                                    <input class="upload__inputfile" type="file" id="formFileMultiple" name="images[]"
-                                        multiple="" data-max_length="9" accept="image/*">
-                                    <input type="text" value="{{ $product->images }}" hidden name="images-old"
-                                        id="images-old">
-                                    <div class="upload__img-wrap">
-                                        {{-- @dd(json_decode($product->images)) --}}
-                                        @foreach (json_decode($product->images) as $key => $item)
-                                            <div class="upload__img-box">
-                                                <div style="background-image: url({{ $item }})"
-                                                    data-number="{{ $key }}" class="img-bg">
-                                                    <div class="upload__img-close"></div>
-                                                </div>
-                                            </div>
-                                        @endforeach
+
+                                    <input id="thumbnail" class="form-control" type="text" name="images" hidden
+                                        multiple>
+                                    <div id="holder" class="d-flex justify-content-center gap-3 flex-wrap">
+                                        @if ($product->images)
+                                            @foreach (explode(',', $product->images) as $item)
+                                                <img src="{{ $item }}"
+                                                    style="height: 10rem; width: 10rem;object-fit: contain">
+                                            @endforeach
+                                        @endif
                                     </div>
                                 </div>
                                 @error('images')

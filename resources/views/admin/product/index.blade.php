@@ -87,12 +87,15 @@
                                     </a>
                                 </td>
                                 <td class="px-0 text-center">
-                                    <img src="{{ json_decode($item->images)[0] ?? '' }}" alt="Ảnh"
+                                    <img src="{{ explode(',', $item->images)[0] ?? '' }}" alt="Ảnh"
                                         class=" object-fit-cover border rounded w-px-40 h-px-40">
                                 </td>
                                 <td>
                                     <a href="{{ route('dashboard.product.edit', $item->id) }}" style="color: inherit    ">
-                                        {{ $item->name }}
+                                        <strong>
+
+                                            {{ $item->name }}
+                                        </strong>
                                     </a>
                                 </td>
 
