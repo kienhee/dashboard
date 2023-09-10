@@ -71,7 +71,7 @@
                         @foreach ($products as $item)
                             <tr>
                                 <td class="px-0 text-center">
-                                    <a href="{{ route('dashboard.product.edit', $item->id) }}"
+                                    <a href="{{ route('dashboard.product.edit', $item->id) }}" title="Click xem thêm"
                                         style="color: inherit"><strong>{{ $item->id }}</strong>
                                     </a>
                                 </td>
@@ -80,7 +80,8 @@
                                         class=" object-fit-cover border rounded w-px-40 h-px-40">
                                 </td>
                                 <td>
-                                    <a href="{{ route('dashboard.product.edit', $item->id) }}" style="color: inherit    ">
+                                    <a href="{{ route('dashboard.product.edit', $item->id) }}" style="color: inherit    "
+                                        title="Click xem thêm">
                                         <strong>
 
                                             {{ $item->name }}

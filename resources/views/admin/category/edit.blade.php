@@ -45,14 +45,16 @@
                                     <option value="0"
                                         {{ $category->category_id == 0 || old('category_id') == 0 ? 'selected' : '' }}>Danh
                                         mục gốc</option>
-                                    @foreach (getAllCategories() as $item)
-                                        <option
-                                            {{ $category->category_id == $item->id || old('category_id') == $item->id ? 'selected' : '' }}
-                                            value="{{ $item->id }}">
-                                            {{ $item->name }}
-                                        </option>
-                                    @endforeach
 
+                                    @if (getAllCategories()->count() > 0)
+                                        @foreach (menuSelect(getAllCategories()) as $item)
+                                            <option
+                                                {{ $category->category_id == $item->id || old('category_id') == $item->id ? 'selected' : '' }}
+                                                value="{{ $item->id }}">
+                                                {{ str_repeat('|--', $item->level) }}
+                                                {{ $item->name }}</option>
+                                        @endforeach
+                                    @endif
                                 </select>
                                 @error('category_id')
                                     <p class="text-danger my-1">{{ $message }}</p>

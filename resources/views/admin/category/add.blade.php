@@ -42,18 +42,21 @@
                                     id="category_id">
                                     <option value="">Vui lòng lựa chọn</option>
                                     <option value="0">Danh mục gốc</option>
-                                    @foreach (getAllCategories() as $category)
-                                        <option {{ old('category_id') == $category->id ? 'selected' : '' }}
-                                            value="{{ $category->id }}">
-                                            {{ $category->name }}</option>
-                                    @endforeach
+                                    @if (getAllCategories()->count() > 0)
+                                        @foreach (menuSelect(getAllCategories()) as $category)
+                                            <option {{ old('category_id') == $category->id ? 'selected' : '' }}
+                                                value="{{ $category->id }}">
+                                                {{ str_repeat('|--', $category->level) }}
+                                                {{ $category->name }}</option>
+                                        @endforeach
+                                    @endif
+
 
                                 </select>
                                 @error('category_id')
                                     <p class="text-danger my-1">{{ $message }}</p>
                                 @enderror
                             </div>
-
                             <div class=" mb-3 col-md-6">
                                 <label for="description" class="form-label">Mô tả ngắn:</label>
 
@@ -65,7 +68,7 @@
                             </div>
                         </div>
                         <div class="mt-2">
-                             <button type="submit" class="btn btn-primary me-2">Tạo mới {{ $moduleName }}</button>
+                            <button type="submit" class="btn btn-primary me-2">Tạo mới {{ $moduleName }}</button>
                             <button type="reset" class="btn btn-outline-secondary">Đặt lại</button>
                         </div>
                     </form>

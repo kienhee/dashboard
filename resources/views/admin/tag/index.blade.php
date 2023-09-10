@@ -27,10 +27,10 @@
 
                         @foreach ($tags as $item)
                             <tr>
-                                <td> <a href="{{ route('dashboard.tag.edit', $item->id) }}"><strong>#{{ $item->id }}</strong>
+                                <td> <a href="{{ route('dashboard.tag.edit', $item->id) }}"  title="Click xem thêm"><strong>#{{ $item->id }}</strong>
                                     </a>
                                 </td>
-                                <td> <a href="{{ route('dashboard.tag.edit', $item->id) }}"
+                                <td> <a href="{{ route('dashboard.tag.edit', $item->id) }}"  title="Click xem thêm"
                                         style="color: inherit">{{ $item->name }}
                                     </a></td>
 

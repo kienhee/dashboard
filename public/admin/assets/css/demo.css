@@ -308,3 +308,65 @@
   border-radius: 5px;
   border: 1px dashed;
 }
+
+.wtree li {
+  list-style-type: none;
+  margin: 10px 0 10px 10px;
+  position: relative;
+}
+
+.wtree li:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -20px;
+  border-left: 1px dashed #ddd;
+  border-bottom: 1px dashed #ddd;
+  width: 20px;
+  height: 15px;
+}
+
+.wtree li:after {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: -20px;
+  border-left: 1px dashed #ddd;
+  border-top: 1px dashed #ddd;
+  width: 20px;
+  height: 100%;
+}
+
+.wtree li:last-child:after {
+  display: none;
+}
+
+.wtree li a {
+  display: block;
+  border: 1px dashed #ddd;
+  padding: 10px;
+  color: #888;
+  text-decoration: none;
+}
+
+.wtree li a:hover,
+.wtree li a:focus {
+  background: #696cff;
+  color: #fff;
+  font-weight: 500;
+  border: 1px dashed #696cff;
+}
+
+.wtree li a:hover+ul li a,
+.wtree li a:focus+ul li a {
+  background: #f1f3f5;
+  color: #000;
+  border: 1px dashed #f1f3f5;
+}
+
+.wtree li a:hover+ul li:after,
+.wtree li a:focus+ul li:after,
+.wtree li a:hover+ul li:before,
+.wtree li a:focus+ul li:before {
+  border-color: #aaa;
+}
