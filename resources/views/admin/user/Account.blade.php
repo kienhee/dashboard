@@ -1,6 +1,11 @@
+@php
+    $moduleName = 'người dùng';
+@endphp
 @extends('layouts.admin.index')
-@section('title', Auth::user()->full_name)
+@section('title', 'Thông tin ' . $moduleName)
 @section('content')
+    <x-breadcrumb parentName="Thông tin người dùng" parentLink="dashboard.user.account-setting"
+        childrenName="{{ Auth::user()->full_name }}" />
     <div class="row">
         <div class="col-md-12">
             <form method="POST" action="{{ route('dashboard.user.update', Auth::user()->id) }}" enctype="multipart/form-data">

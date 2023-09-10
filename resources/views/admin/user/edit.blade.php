@@ -1,25 +1,18 @@
+@php
+    $moduleName = 'người dùng';
+@endphp
 @extends('layouts.admin.index')
-@section('title', $user->full_name)
+@section('title', 'Cập nhật ' . $moduleName)
 @section('content')
+    <x-breadcrumb parentName="Quản lý {{ $moduleName }}" parentLink="dashboard.user.index"
+        childrenName="Cập nhật {{ $moduleName }}" />
     <div class="row">
         <div class="col-md-12">
             <form method="POST" action="{{ route('dashboard.user.update', $user->id) }}" enctype="multipart/form-data">
                 <div class="card mb-4">
-                    @if (session('msgSuccess'))
-                        <div class=" mt-3 mx-3 alert alert-success alert-dismissible" role="alert">
-                            {{ session('msgSuccess') }}
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                    @endif
-                    @if (session('msgError'))
-                        <div class="mt-3 mx-3  alert alert-danger alert-dismissible" role="alert">
-                            {{ session('msgError') }}
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                        </div>
-                    @endif
-
-
-                    <h5 class="card-header">Thông tin cá nhân</h5>
+                    <x-alert />
+                    <x-header-table tableName="Cập nhật {{ $moduleName }}" link="dashboard.user.index"
+                        linkName="Danh sách {{ $moduleName }}" />
                     <!-- Account -->
                     <div class="card-body">
 
@@ -73,7 +66,7 @@
                             </div>
                         </div>
                         <div class="mt-2">
-                            <button type="submit" class="btn btn-primary me-2">Lưu thay đổi</button>
+                            <button type="submit" class="btn btn-primary me-2">Cập nhật {{ $moduleName }}</button>
                             <button type="reset" class="btn btn-outline-secondary">Đặt lại</button>
                         </div>
                     </div>

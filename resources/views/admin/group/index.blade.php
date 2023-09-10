@@ -1,26 +1,17 @@
+@php
+    $moduleName = 'nhóm người dùng';
+@endphp
 @extends('layouts.admin.index')
-@section('title', 'Danh sách nhóm người dùng')
+@section('title', 'Quản lý ' . $moduleName)
 
 @section('content')
-    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Quản lý nhóm /</span> Danh sách nhóm người dùng</h4>
+    <x-breadcrumb parentName="Quản lý {{ $moduleName }}" parentLink="dashboard.group.index"
+        childrenName="Danh sách {{ $moduleName }}" />
     <div class="card">
-        @if (session('msgSuccess'))
-            <div class=" mt-3 mx-3 alert alert-success alert-dismissible" role="alert">
-                {{ session('msgSuccess') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        @endif
-        @if (session('msgError'))
-            <div class="mt-3 mx-3  alert alert-danger alert-dismissible" role="alert">
-                {{ session('msgError') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        @endif
-        <div class="d-flex justify-content-between align-items-center mx-3">
-            <h5 class="card-header px-0">Danh sách nhóm người
-                dùng </h5>
-            <a href="{{ route('dashboard.group.add') }}" class="btn btn-outline-primary btn-sm"> Thêm nhóm người dùng</a>
-        </div>
+        <x-alert />
+        <x-header-table tableName="Danh sách {{ $moduleName }}" link="dashboard.group.add"
+            linkName="Tạo {{ $moduleName }}" />
+
         <hr class="my-0 mb-4" />
         <div class="table-responsive text-nowrap">
             <table class="table">
@@ -36,11 +27,12 @@
                     @if ($groups->count() > 0)
                         @foreach ($groups as $item)
                             <tr>
-                                <td><i class="fab fa-angular fa-lg text-danger "></i> <a
-                                        href="{{ route('dashboard.group.edit', $item->id) }}"><strong>#{{ $item->id }}</strong>
+                                <td> <a href="{{ route('dashboard.group.edit', $item->id) }}"><strong>#{{ $item->id }}</strong>
                                     </a>
                                 </td>
-                                <td>{{ $item->name }}</td>
+                                <td><a href="{{ route('dashboard.group.edit', $item->id) }}"
+                                        style="color: inherit">{{ $item->name }}
+                                    </a></td>
 
                                 <td>
                                     {{ $item->created_at->format('d-m-Y') ?? '' }}
