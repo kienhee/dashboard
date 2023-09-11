@@ -19,7 +19,8 @@
                         @csrf
                         <div class="row">
                             <div class="mb-3 col-md-6">
-                                <label for="full_name" class="form-label">Họ và tên:</label>
+                                <label for="full_name" class="form-label">Họ và tên: <span
+                                        class="text-danger">*</span></label>
                                 <input class="form-control @error('full_name') is-invalid @enderror " type="text"
                                     id="full_name" name="full_name" value="{{ old('full_name') }}"
                                     placeholder="Nguyen Van A" autofocus />
@@ -28,7 +29,7 @@
                                 @enderror
                             </div>
                             <div class="mb-3 col-md-6">
-                                <label for="email" class="form-label">E-mail</label>
+                                <label for="email" class="form-label">E-mail: <span class="text-danger">*</span></label>
                                 <input class="form-control @error('email') is-invalid @enderror" type="text"
                                     id="email" name="email" value="{{ old('email') }}"
                                     placeholder="NguyenVanA@gmail.com" />
@@ -37,7 +38,8 @@
                                 @enderror
                             </div>
                             <div class="mb-3 col-md-6">
-                                <label for="group" class="form-label">Nhóm người dùng</label>
+                                <label for="group" class="form-label">Nhóm người dùng: <span
+                                        class="text-danger">*</span></label>
                                 <select class="form-select @error('     ') is-invalid @enderror" name="group_id"
                                     id="group">
                                     <option value="">Vui lòng lựa chọn</option>
@@ -53,7 +55,8 @@
                                 @enderror
                             </div>
                             <div class="mb-3 col-md-6">
-                                <label class="form-label" for="phone_number">Số điện thoại:</label>
+                                <label class="form-label" for="phone_number">Số điện thoại: <span
+                                        class="text-danger">*</span></label>
                                 <input class="form-control @error('phone_number') is-invalid @enderror" type="text"
                                     id="phone_number" name="phone_number" value="{{ old('phone_number') }}"
                                     placeholder="000-000-0000">
@@ -62,7 +65,8 @@
                                 @enderror
                             </div>
                             <div class="form-password-toggle mb-3 col-md-6">
-                                <label class="form-label" for="password">Mật khẩu</label>
+                                <label class="form-label" for="password">Mật khẩu: <span
+                                        class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <input type="password" class="form-control @error('password') is-invalid @enderror"
                                         id="password" name="password"
@@ -75,7 +79,8 @@
                                 @enderror
                             </div>
                             <div class="form-password-toggle mb-3 col-md-6">
-                                <label class="form-label" for="password_confirmation">Xác nhận mật khẩu</label>
+                                <label class="form-label" for="password_confirmation">Xác nhận mật khẩu: <span
+                                        class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <input type="password"
                                         class="form-control @error('password_confirmation') is-invalid @enderror"

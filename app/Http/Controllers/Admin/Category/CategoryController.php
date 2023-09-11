@@ -45,11 +45,12 @@ class CategoryController extends Controller
             'name' => 'required|max:50|unique:categories,name',
             'slug' => 'required|unique:categories,slug',
             'category_id' => 'required|numeric',
-            'description' => '',
+            'description' => 'max:255',
         ], [
             "name.required" => "Vui lòng nhập trường này",
             "name.unique" => "Tên này đã tồn tại!",
             "name.max" => "Tối đa :max kí tự",
+            "description.max" => "Tối đa :max kí tự",
             "slug.required" => "Vui lòng thêm đường dẫn",
             "slug.unique" => "Đường dẫn này đã tồn tại!",
             "category_id.required" => "Vui lòng lựa chọn",

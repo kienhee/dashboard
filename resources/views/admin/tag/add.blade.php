@@ -21,7 +21,7 @@
                         @csrf
                         <div class="row ">
                             <div class="mb-3 col-md-12">
-                                <label for="name" class="form-label">Tên thẻ:</label>
+                                <label for="name" class="form-label">Tên thẻ: <span class="text-danger">*</span></label>
                                 <input class="form-control @error('name') is-invalid @enderror " type="text"
                                     id="name" name="name" value="{{ old('name') }}"
                                     placeholder="VD: Fashion, Brand, Gender" autofocus />
@@ -31,7 +31,7 @@
                             </div>
                         </div>
                         <div class="mt-2">
-                              <button type="submit" class="btn btn-primary me-2">Tạo mới {{ $moduleName }}</button>
+                            <button type="submit" class="btn btn-primary me-2">Tạo mới {{ $moduleName }}</button>
                             <button type="reset" class="btn btn-outline-secondary">Đặt lại</button>
                         </div>
                     </form>

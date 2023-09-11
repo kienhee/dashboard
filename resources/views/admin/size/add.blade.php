@@ -19,7 +19,8 @@
                         @csrf
                         <div class="row ">
                             <div class="mb-3 col-md-12">
-                                <label for="name" class="form-label">Tên kích thước:</label>
+                                <label for="name" class="form-label">Tên kích thước: <span
+                                        class="text-danger">*</span></label>
                                 <input class="form-control @error('name') is-invalid @enderror " type="text"
                                     id="name" name="name" value="{{ old('name') }}"
                                     placeholder="VD: Size L, M, XL, 1.5, 25 ...v.v" autofocus />

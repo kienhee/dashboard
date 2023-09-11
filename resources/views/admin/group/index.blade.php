@@ -27,11 +27,12 @@
                     @if ($groups->count() > 0)
                         @foreach ($groups as $item)
                             <tr>
-                                <td> <a href="{{ route('dashboard.group.edit', $item->id) }}"  title="Click xem thêm"><strong>#{{ $item->id }}</strong>
+                                <td> <a href="{{ route('dashboard.group.edit', $item->id) }}" style="color: inherit"
+                                        title="Click xem thêm"><strong>#{{ $item->id }}</strong>
                                     </a>
                                 </td>
-                                <td><a href="{{ route('dashboard.group.edit', $item->id) }}"  title="Click xem thêm"
-                                        style="color: inherit">{{ $item->name }}
+                                <td><a href="{{ route('dashboard.group.edit', $item->id) }}" title="Click xem thêm"
+                                        style="color: inherit"> <strong>{{ $item->name }}</strong>
                                     </a></td>
 
                                 <td>

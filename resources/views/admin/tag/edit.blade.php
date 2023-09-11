@@ -20,7 +20,7 @@
                         @method('put')
                         <div class="row ">
                             <div class="mb-3 col-md-12">
-                                <label for="name" class="form-label">Tên thẻ:</label>
+                                <label for="name" class="form-label">Tên thẻ: <span class="text-danger">*</span></label>
                                 <input class="form-control @error('name') is-invalid @enderror " type="text"
                                     id="name" name="name" value="{{ $tag->name ?? old('name') }}"
                                     placeholder="VD: Size L, M, XL, 1.5, 25 ...v.v" autofocus />

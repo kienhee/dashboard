@@ -14,7 +14,7 @@
 
         <form method="GET" class="mx-3 mb-4 mt-4">
             <div class="row ">
-                <div class="col-md-6 col-lg-3 mb-2">
+                <div class="col-md-6 col-lg-4 mb-2">
                     <div class="input-group input-group-merge">
                         <span class="input-group-text" id="basic-addon-search31"><i class="bx bx-search"></i></span>
                         <input type="search" class="form-control" placeholder="Tên hoặc mã sản phẩm" name="keywords"
@@ -25,7 +25,7 @@
 
 
 
-                <div class="col-md-6 col-lg-3 mb-2">
+                <div class="col-md-6 col-lg-4 mb-2">
                     <select class="form-select" name="status">
                         <option value="">Trạng thái</option>
                         <option value="active" {{ Request()->status == 'active' ? 'selected' : '' }}>Hoạt động</option>
@@ -33,23 +33,8 @@
                         </option>
                     </select>
                 </div>
-                <div class="col-md-6 col-lg-3 mb-2">
-                    <select class="form-select @error('category_id') is-invalid @enderror" name="category_id"
-                        id="category_id">
-                        <option value="">Danh mục</option>
-                        @if (getAllCategories()->count() > 0)
-                            @foreach (menuSelect(getAllCategories()) as $category)
-                                <option {{ old('category_id') == $category->id ? 'selected' : '' }}
-                                    value="{{ $category->id }}" @if ($category->category_id == 0) @disabled(true) @endif>
-                                    {{ str_repeat('|---', $category->level) }}
-                                    {{ $category->name }}</option>
-                            @endforeach
-                        @endif
 
-                    </select>
-
-                </div>
-                <div class="col-md-6 col-lg-3 mb-2">
+                <div class="col-md-6 col-lg-4 mb-2">
                     <select class="form-select" name="sort">
                         <option value="">Bộ lọc</option>
                         <option value="desc" {{ Request()->sort == 'desc' ? 'selected' : '' }}>Mới nhất</option>

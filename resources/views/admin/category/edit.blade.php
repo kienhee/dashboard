@@ -19,7 +19,8 @@
                         @method('put')
                         <div class="row">
                             <div class="mb-3 col-md-6">
-                                <label for="name" class="form-label">Tên danh mục:</label>
+                                <label for="name" class="form-label">Tên danh mục: <span
+                                        class="text-danger">*</span></label>
                                 <input class="form-control @error('name') is-invalid @enderror " type="text"
                                     oninput="createSlug('name','slug')" id="name" name="name"
                                     value="{{ $category->name ?? old('name') }}" placeholder="Tên danh mục" autofocus />
@@ -28,7 +29,8 @@
                                 @enderror
                             </div>
                             <div class="mb-3 col-md-6">
-                                <label for="slug" class="form-label">Đường dẫn URL:</label>
+                                <label for="slug" class="form-label">Đường dẫn URL: <span
+                                        class="text-danger">*</span></label>
                                 <input class="form-control @error('slug') is-invalid @enderror" type="text"
                                     id="slug" name="slug" value="{{ $category->slug ?? old('slug') }}"
                                     placeholder="Ten-danh-muc" />
@@ -38,7 +40,8 @@
                             </div>
 
                             <div class="mb-3 col-md-6">
-                                <label for="category_id" class="form-label">Thuộc danh mục</label>
+                                <label for="category_id" class="form-label">Thuộc danh mục: <span
+                                        class="text-danger">*</span></label>
                                 <select class="form-select @error('category_id') is-invalid @enderror" name="category_id"
                                     id="category_id">
                                     <option value="">Vui lòng lựa chọn</option>

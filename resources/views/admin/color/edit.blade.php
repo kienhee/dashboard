@@ -20,7 +20,7 @@
                         @method('put')
                         <div class="row ">
                             <div class="mb-3 col-md-9">
-                                <label for="name" class="form-label">Tên màu:</label>
+                                <label for="name" class="form-label">Tên màu: <span class="text-danger">*</span></label>
                                 <input class="form-control @error('name') is-invalid @enderror " type="text"
                                     id="name" name="name" value="{{ $color->name ?? old('name') }}"
                                     placeholder="VD: Xanh da trời, Vàng da bò, Đỏ son ...v.v" autofocus />
@@ -29,7 +29,8 @@
                                 @enderror
                             </div>
                             <div class="mb-3 col-md-3">
-                                <label for="code" class="form-label">Mã màu (#HEX):</label>
+                                <label for="code" class="form-label">Mã màu (#HEX): <span
+                                        class="text-danger">*</span></label>
                                 <input class="form-control  coloris @error('code') is-invalid @enderror " type="text"
                                     id="code" name="code" value="{{ $color->code ?? old('code') }}"
                                     placeholder="Tên màu mới" autofocus />

@@ -74,12 +74,12 @@
 
                         @foreach ($users as $item)
                             <tr>
-                                <td> <a href="{{ route('dashboard.user.edit', $item->id) }}"
+                                <td> <a href="{{ route('dashboard.user.edit', $item->id) }}" style="color: inherit"
                                         title="Click xem thêm"><strong>#{{ $item->id }}</strong>
                                     </a>
                                 </td>
                                 <td> <a href="{{ route('dashboard.user.edit', $item->id) }}" title="Click xem thêm"
-                                        style="color: inherit">{{ $item->full_name }}
+                                        style="color: inherit"><strong>{{ $item->full_name }}</strong>
                                     </a></td>
                                 <td>
                                     {{ $item->email }}

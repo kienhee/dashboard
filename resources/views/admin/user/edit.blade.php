@@ -38,17 +38,19 @@
                         @method('put')
                         <div class="row">
                             <div class="mb-3 col-md-6">
-                                <label for="full_name" class="form-label">Họ và tên:</label>
+                                <label for="full_name" class="form-label">Họ và tên: <span
+                                        class="text-danger">*</span></label>
                                 <input class="form-control" type="text" id="full_name" name="full_name"
                                     value="{{ $user->full_name }}" />
                             </div>
                             <div class="mb-3 col-md-6">
-                                <label for="" class="form-label">E-mail:</label>
+                                <label for="" class="form-label">E-mail: </label>
                                 <input class="form-control" type="text" disabled placeholder="john.doe@example.com"
                                     value="{{ $user->email }}" />
                             </div>
                             <div class="mb-3 col-md-6">
-                                <label for="group" class="form-label">Nhóm người dùng:</label>
+                                <label for="group" class="form-label">Nhóm người dùng: <span
+                                        class="text-danger">*</span></label>
                                 <select class="form-select" name="group_id" id="group">
                                     <option>Vui lòng lựa chọn</option>
                                     @foreach (getAllGroups() as $group)
@@ -60,7 +62,8 @@
                                 </select>
                             </div>
                             <div class="mb-3 col-md-6">
-                                <label class="form-label" for="phone_number">Số điện thoại:</label>
+                                <label class="form-label" for="phone_number">Số điện thoại: <span
+                                        class="text-danger">*</span></label>
                                 <input class="form-control" type="text" id="phone_number" name="phone_number"
                                     value="{{ $user->phone_number }}" />
                             </div>

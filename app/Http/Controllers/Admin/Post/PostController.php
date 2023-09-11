@@ -17,9 +17,6 @@ class PostController extends Controller
             $result->where('name', 'like', '%' . $request->keywords . '%')
                 ->orWhere('product_code', 'like', '%' . $request->keywords . '%');
         }
-        if ($request->has('category_id') && $request->category_id != null) {
-            $result->where('category_id', '=',  $request->category_id);
-        }
 
 
         if ($request->has('sort') && $request->sort != null) {

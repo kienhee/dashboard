@@ -25,7 +25,7 @@
                                     <img id="img_preview" class="img-fluid object-fit-contain"
                                         src="{{ asset('images/pngtree-image-upload-icon-photo.png') }}" alt="your image" />
                                     <label for="imgInp" data-preview="holder" class="form-label upload-label mb-3">
-                                        <p class="mb-0">Thêm ảnh bìa</p>
+                                        <p class="mb-0">Thêm ảnh bìa <span class="text-danger">*</span></p>
                                         <small>(Nên chọn hình tỉ lệ 1:1)</small>
                                     </label>
 
@@ -39,7 +39,7 @@
                             </div>
 
                             <div class="mb-3 col-md-6">
-                                <label for="title" class="form-label">Tiêu đề:</label>
+                                <label for="title" class="form-label">Tiêu đề: <span class="text-danger">*</span></label>
                                 <input class="form-control @error('title') is-invalid @enderror " type="text"
                                     oninput="createSlug('title','slug')" id="title" name="title"
                                     value="{{ old('title') }}" placeholder="Tiêu đề" autofocus />
@@ -48,7 +48,8 @@
                                 @enderror
                             </div>
                             <div class="mb-3 col-md-6">
-                                <label for="slug" class="form-label">Đường dẫn URL:</label>
+                                <label for="slug" class="form-label">Đường dẫn URL: <span
+                                        class="text-danger">*</span></label>
                                 <input class="form-control @error('slug') is-invalid @enderror" type="text"
                                     id="slug" name="slug" value="{{ old('slug') }}" placeholder="duong-dan-url" />
                                 @error('slug')
@@ -56,7 +57,8 @@
                                 @enderror
                             </div>
                             <div class="col-12 mb-3">
-                                <label for="description" class="form-label">Mô tả ngắn:</label>
+                                <label for="description" class="form-label">Mô tả ngắn: <span
+                                        class="text-danger">*</span></label>
                                 <textarea class="form-control @error('description') is-invalid @enderror " id="description" rows="3"
                                     name="description" placeholder="Mô tả ngắn về về bài viết">{{ old('description') }}</textarea>
                                 @error('description')
@@ -64,7 +66,8 @@
                                 @enderror
                             </div>
                             <div class="col-12 mb-3">
-                                <label for="content-product" class="form-label">Nội dung bài viết :</label>
+                                <label for="content-product" class="form-label">Nội dung bài viết : <span
+                                        class="text-danger">*</span></label>
                                 <textarea class="form-control @error('content') is-invalid @enderror " id="content-product" rows="3"
                                     name="content">{{ old('content') }}</textarea>
                                 @error('content')
@@ -73,7 +76,8 @@
                             </div>
 
                             <div class="mb-3 col-md-12">
-                                <label for="select-multiple" class="form-label">Tags:</label>
+                                <label for="select-multiple" class="form-label">Tags: <span
+                                        class="text-danger">*</span></label>
                                 <select id="select-multiple" class="@error('tags') is-invalid @enderror" multiple
                                     name="tags" placeholder="Chọn tags cho bài viết" data-search="true"
                                     data-silent-initial-value-set="true">
