@@ -19,9 +19,7 @@ return new class extends Migration
             $table->string('description');
             $table->text('content');
             $table->integer('user_id');
-            $table->integer('category_id');
             $table->string('tags');
-            $table->boolean('isPublish')->default(true);
             $table->softDeletes();
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();

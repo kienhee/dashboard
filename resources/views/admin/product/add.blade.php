@@ -110,12 +110,15 @@
                                 <select class="form-select @error('category_id') is-invalid @enderror" name="category_id"
                                     id="category_id">
                                     <option value="">Vui lòng lựa chọn</option>
-                                    @foreach (getAllCategories() as $category)
-                                        <option {{ old('category_id') == $category->id ? 'selected' : '' }}
-                                            value="{{ $category->id }}">
-                                            {{ $category->name }} -
-                                            {{ $category->type == 'product' ? 'Sản phẩm' : 'Tin tức' }}</option>
-                                    @endforeach
+                                    @if (getAllCategories()->count() > 0)
+                                        @foreach (menuSelect(getAllCategories()) as $category)
+                                            <option {{ old('category_id') == $category->id ? 'selected' : '' }}
+                                                value="{{ $category->id }}"
+                                                @if ($category->category_id == 0) @disabled(true) @endif>
+                                                {{ str_repeat('|---', $category->level) }}
+                                                {{ $category->name }}</option>
+                                        @endforeach
+                                    @endif
 
                                 </select>
 
@@ -163,12 +166,15 @@
                                 <select id="select-multiple" class="@error('genders') is-invalid @enderror" multiple
                                     name="genders" placeholder="Chọn giới tính" data-search="false"
                                     data-silent-initial-value-set="true">
-                                    <option value="male"
-                                        {{ strpos(old('genders'), 'male') !== false ? 'selected' : '' }}>
+                                    <option value="nam"
+                                        {{ strpos(old('genders'), 'nam') !== false ? 'selected' : '' }}>
                                         Nam
                                     </option>
-                                    <option value="female"
-                                        {{ strpos(old('genders'), 'female') != false ? 'selected' : '' }}>Nữ
+                                    <option value="nu"
+                                        {{ strpos(old('genders'), 'nu') != false ? 'selected' : '' }}>Nữ
+                                    </option>
+                                    <option value="unisex"
+                                        {{ strpos(old('genders'), 'unisex') != false ? 'selected' : '' }}>Unisex
                                     </option>
 
                                 </select>
@@ -181,7 +187,7 @@
                                 <label for="regular_price" class="form-label">Giá thường ("Giá bán công khai"):</label>
                                 <div class="input-group input-group-merge">
                                     <span class="input-group-text">$</span>
-                                    <input type="text"name="regular_price" value="{{ old('regular_price') }}"
+                                    <input type="text"name="regular_price" value="{{ old('regular_price') ?? 0 }}"
                                         class="form-control" placeholder="0.000">
                                     <span class="input-group-text">VND</span>
                                 </div>
@@ -194,7 +200,7 @@
                                 <div class="input-group input-group-merge">
                                     <span class="input-group-text">%</span>
                                     <input type="text" name="sale" class="form-control"
-                                        value="{{ old('sale') }}" placeholder="0.000">
+                                        value="{{ old('sale') ?? 0 }}" placeholder="0.000">
                                 </div>
                                 @error('sale')
                                     <p class="text-danger my-1">{{ $message }}</p>
@@ -210,7 +216,7 @@
                                 <div class="input-group input-group-merge">
                                     <span class="input-group-text">%</span>
                                     <input type="text" name="tax" class="form-control"
-                                        value="{{ old('tax') }}" placeholder="0.00">
+                                        value="{{ old('tax') ?? 0 }}" placeholder="0.00">
                                 </div>
                                 @error('tax')
                                     <p class="text-danger my-1">{{ $message }}</p>

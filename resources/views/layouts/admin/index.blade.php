@@ -168,7 +168,16 @@
             ]
         });
     </script>
-
+    <script>
+        let imgInp = document.getElementById('imgInp')
+        let img_preview = document.getElementById('img_preview')
+        imgInp.onchange = evt => {
+            const [file] = imgInp.files
+            if (file) {
+                img_preview.src = URL.createObjectURL(file)
+            }
+        }
+    </script>
 </body>
 
 </html>

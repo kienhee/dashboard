@@ -1,15 +1,15 @@
 @php
-    $moduleName = 'sản phẩm';
+    $moduleName = 'bài viết';
 @endphp
 @extends('layouts.admin.index')
 @section('title', 'Quản lý ' . $moduleName)
 
 @section('content')
-    <x-breadcrumb parentName="Quản lý {{ $moduleName }}" parentLink="dashboard.product.index"
+    <x-breadcrumb parentName="Quản lý {{ $moduleName }}" parentLink="dashboard.post.index"
         childrenName="Danh sách {{ $moduleName }}" />
     <div class="card">
         <x-alert />
-        <x-header-table tableName="Danh sách {{ $moduleName }}" link="dashboard.product.add"
+        <x-header-table tableName="Danh sách {{ $moduleName }}" link="dashboard.post.add"
             linkName="Tạo {{ $moduleName }}" />
 
         <form method="GET" class="mx-3 mb-4 mt-4">
@@ -59,7 +59,7 @@
 
 
                 <div class="col-md-6 col-lg-12 mb-2 text-md-end">
-                    <a href="{{ route('dashboard.product.index') }}" class="btn btn-outline-secondary">Đặt lại </a>
+                    <a href="{{ route('dashboard.post.index') }}" class="btn btn-outline-secondary">Đặt lại </a>
                     <button type="submit" class="btn btn-primary">Tìm kiếm</button>
                 </div>
 
@@ -72,40 +72,42 @@
                     <tr>
                         <th class="px-1 text-center" style="width: 50px">#ID</th>
                         <th class="px-1 text-center" style="width: 50px"></th>
-                        <th>Tên sản phẩm</th>
-                        <th class="px-1 text-center" style="width: 130px">Danh mục</th>
+                        <th>Tiêu đề bài viết</th>
+                        <th class="px-1 text-center" style="width: 130px">Người đăng</th>
+                        <th class="px-1 text-center" style="width: 130px">Ngày đăng</th>
                         <th class="px-1 text-center" style="width: 130px">Trạng thái</th>
-                        <th class="px-1 text-center" style="width: 130px">Số lượng</th>
                         <th class="px-1 text-center" style="width: 130px">Cài đặt</th>
                     </tr>
                 </thead>
                 <tbody class="table-border-bottom-0">
-                    @if ($products->count() > 0)
-                        @foreach ($products as $item)
+                    @if ($posts->count() > 0)
+                        @foreach ($posts as $item)
                             <tr>
                                 <td class="px-0 text-center">
-                                    <a href="{{ route('dashboard.product.edit', $item->id) }}" title="Click xem thêm"
+                                    <a href="{{ route('dashboard.post.edit', $item->id) }}" title="Click xem thêm"
                                         style="color: inherit"><strong>{{ $item->id }}</strong>
                                     </a>
                                 </td>
                                 <td class="px-0 text-center">
-                                    <img src="{{ explode(',', $item->images)[0] ?? '' }}" alt="Ảnh"
-                                        class=" object-fit-cover border rounded w-px-40 h-px-40">
+                                    <img src="{{ $item->cover ?? asset('images/no-img.png') }}" style="object-fit: contain"
+                                        alt="Ảnh" class=" border rounded w-px-40 h-px-40">
                                 </td>
                                 <td>
-                                    <a href="{{ route('dashboard.product.edit', $item->id) }}" style="color: inherit    "
+                                    <a href="{{ route('dashboard.post.edit', $item->id) }}" style="color: inherit    "
                                         title="Click xem thêm">
                                         <strong>
-                                            {{ $item->name }}
+                                            {{ $item->title }}
                                         </strong>
                                     </a>
                                 </td>
-                                <td class="px-0 text-center">{{ $item->category->name }}</td>
-                                <td class="px-0 text-center"><span
-                                        class="badge  me-1 {{ $item->deleted_at == null ? 'bg-label-success ' : ' bg-label-primary' }}">{{ $item->deleted_at == null ? 'Công khai' : 'Tạm ẩn' }}</span>
+                                <td class="text-center px-0">
+                                    {{ $item->user->full_name }}
                                 </td>
                                 <td class="text-center px-0">
-                                    {{ $item->quantity }}
+                                    {{ $item->created_at->format('d/m/Y') }}
+                                </td>
+                                <td class="px-0 text-center"><span
+                                        class="badge  me-1 {{ $item->deleted_at == null ? 'bg-label-success ' : ' bg-label-primary' }}">{{ $item->deleted_at == null ? 'Công khai' : 'Tạm ẩn' }}</span>
                                 </td>
 
                                 <td class="px-0 text-center">
@@ -116,14 +118,14 @@
                                         </button>
                                         <div class="dropdown-menu">
                                             <a class="dropdown-item"
-                                                href="{{ route('dashboard.product.edit', $item->id) }}"><i
+                                                href="{{ route('dashboard.post.edit', $item->id) }}"><i
                                                     class="bx bx-edit-alt me-1"></i>
                                                 Xem thêm</a>
 
 
                                             @if ($item->trashed() == 1)
                                                 <form class="dropdown-item"
-                                                    action="{{ route('dashboard.product.restore', $item->id) }}"
+                                                    action="{{ route('dashboard.post.restore', $item->id) }}"
                                                     method="POST">
                                                     @csrf
                                                     @method('delete')
@@ -134,7 +136,7 @@
                                                 </form>
                                             @endif
                                             <form class="dropdown-item"
-                                                action="{{ $item->trashed() ? route('dashboard.product.force-delete', $item->id) : route('dashboard.product.soft-delete', $item->id) }}"
+                                                action="{{ $item->trashed() ? route('dashboard.post.force-delete', $item->id) : route('dashboard.post.soft-delete', $item->id) }}"
                                                 method="POST"
                                                 @if ($item->trashed()) onsubmit="return confirm('Bạn chắc chắn muốn xóa vĩnh viễn?')" @endif>
                                                 @csrf
@@ -164,7 +166,7 @@
             </table>
         </div>
         <div class="mx-3 mt-3">
-            {{ $products->withQueryString()->links() }}
+            {{ $posts->withQueryString()->links() }}
         </div>
     </div>
 @endsection

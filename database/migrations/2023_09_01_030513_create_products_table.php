@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('slug');
             $table->string('description');
             $table->text('content');
-            $table->string('product_code');
-            $table->string('product_sku');
+            $table->string('product_code')->nullable();
+            $table->string('product_sku')->nullable();
             $table->integer('category_id');
             $table->integer('quantity');
             $table->string('colors')->nullable();

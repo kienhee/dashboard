@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Category;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -107,11 +108,10 @@ class CategoryController extends Controller
     }
     public function forceDelete($id)
     {
-        // $CheckUserExists = User::where('group_id', $id)->get();
-        // if ($CheckUserExists->count() > 0) {
-        //     return back()->with('msgError', 'Còn ' . $CheckUserExists->count() . ' người dùng trong nhóm , không thể xóa');
-        // }
-        // check sản phẩm tồn tại trong danh mục
+        $CheckProductExists = Product::where('category_id', $id)->get();
+        if ($CheckProductExists->count() > 0) {
+            return back()->with('msgError', 'Còn ' . $CheckProductExists->count() . ' sản phẩm trong danh mục , không thể xóa');
+        }
         $check = Category::onlyTrashed()->where('id', $id)->forceDelete();
         if ($check) {
             return back()->with('msgSuccess', 'Xóa thành công');

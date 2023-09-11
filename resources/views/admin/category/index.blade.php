@@ -83,7 +83,8 @@
                                 @foreach ($categories as $item)
                                     <tr>
                                         <td> <a href="{{ route('dashboard.category.edit', $item->id) }}"
-                                                title="Click xem thêm"><strong>#{{ $item->id }}</strong>
+                                                title="Click xem thêm"
+                                                style="color:inherit"><strong>#{{ $item->id }}</strong>
                                             </a>
                                         </td>
                                         <td><a href="{{ route('dashboard.category.edit', $item->id) }}"

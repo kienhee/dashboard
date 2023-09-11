@@ -25,7 +25,13 @@
             'name' => 'Quản lý sản phẩm',
             'classIcon' => 'menu-icon tf-icons bx bx-package',
             'route' => '#',
-            'children' => [['name' => 'Danh sách sản phẩm', 'route' => 'dashboard.product.index'], ['name' => 'Thêm mới sản phẩm', 'route' => 'dashboard.product.add'], ['name' => 'Bảng màu', 'route' => 'dashboard.color.index'], ['name' => 'Kích thước', 'route' => 'dashboard.size.index'], ['name' => 'Tags', 'route' => 'dashboard.tag.index']],
+            'children' => [['name' => 'Danh sách sản phẩm', 'route' => 'dashboard.product.index'], ['name' => 'Thêm mới sản phẩm', 'route' => 'dashboard.product.add'], ['name' => 'Bảng màu', 'route' => 'dashboard.color.index'], ['name' => 'Kích thước', 'route' => 'dashboard.size.index']],
+        ],
+        [
+            'name' => 'Quản lý bài viết',
+            'classIcon' => 'menu-icon tf-icons bx bx-news',
+            'route' => '#',
+            'children' => [['name' => 'Danh sách bài viết', 'route' => 'dashboard.post.index'], ['name' => 'Tags', 'route' => 'dashboard.tag.index']],
         ],
         [
             'name' => 'Quản lý nhóm',

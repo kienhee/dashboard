@@ -30,8 +30,8 @@
                                         <small>(Nên chọn hình tỉ lệ 1:1)</small>
                                     </label>
 
-                                    <input id="thumbnail" class="form-control" type="text" name="images" hidden
-                                        multiple>
+                                    <input id="thumbnail" class="form-control" type="text" name="images"
+                                        value="{{ $product->images }}" hidden multiple>
                                     <div id="holder" class="d-flex justify-content-center gap-3 flex-wrap">
                                         @if ($product->images)
                                             @foreach (explode(',', $product->images) as $item)
@@ -108,17 +108,22 @@
                                     <p class="text-danger my-1">{{ $message }}</p>
                                 @enderror
                             </div>
+
                             <div class="mb-3 col-md-6">
                                 <label for="category_id" class="form-label">Danh mục</label>
                                 <select class="form-select @error('category_id') is-invalid @enderror" name="category_id"
                                     id="category_id">
                                     <option value="">Vui lòng lựa chọn</option>
-                                    @foreach (getAllCategories() as $category)
-                                        <option {{ old('category_id') == $category->id ? 'selected' : '' }}
-                                            value="{{ $category->id }}">
-                                            {{ $category->name }} -
-                                            {{ $category->type == 'product' ? 'Sản phẩm' : 'Tin tức' }}</option>
-                                    @endforeach
+                                    @if (getAllCategories()->count() > 0)
+                                        @foreach (menuSelect(getAllCategories()) as $category)
+                                            <option
+                                                {{ $product->category_id == $category->id || old('category_id') == $category->id ? 'selected' : '' }}
+                                                value="{{ $category->id }}"
+                                                @if ($category->category_id == 0) @disabled(true) @endif>
+                                                {{ str_repeat('|---', $category->level) }}
+                                                {{ $category->name }} </option>
+                                        @endforeach
+                                    @endif
 
                                 </select>
 
@@ -160,21 +165,24 @@
                                     <p class="text-danger my-1">{{ $message }}</p>
                                 @enderror
                             </div>
-
-
                             <div class="mb-3 col-md-12">
                                 <label for="select-multiple" class="form-label">Giới tính:</label>
                                 <select id="select-multiple" class="@error('genders') is-invalid @enderror" multiple
                                     name="genders" placeholder="Chọn giới tính" data-search="false"
                                     data-silent-initial-value-set="true">
-                                    <option value="male"
-                                        {{ strpos($product->genders ?? old('genders'), 'male') !== false ? 'selected' : '' }}>
-                                        Nam
+                                    <option
+                                        {{ strpos($product->genders ?? old('genders'), 'nam') !== false ? 'selected' : '' }}
+                                        value="nam">Nam
                                     </option>
-                                    <option value="female"
-                                        {{ strpos($product->genders ?? old('genders'), 'female') != false ? 'selected' : '' }}>
-                                        Nữ
+                                    <option
+                                        {{ strpos($product->genders ?? old('genders'), 'nu') !== false ? 'selected' : '' }}
+                                        value="nu">Nữ
                                     </option>
+                                    <option
+                                        {{ strpos($product->genders ?? old('genders'), 'unisex') !== false ? 'selected' : '' }}
+                                        value="unisex">Unisex
+                                    </option>
+
 
                                 </select>
                                 @error('genders')

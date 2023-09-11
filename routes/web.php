@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\Group\GroupController;
 use App\Http\Controllers\Admin\ImageController;
+use App\Http\Controllers\Admin\Post\PostController;
 use App\Http\Controllers\Admin\Product\ProductController;
 use App\Http\Controllers\Admin\Size\SizeController;
 use App\Http\Controllers\Admin\Tag\TagController;
@@ -46,9 +47,19 @@ Route::prefix('/dashboard')->name('dashboard.')->middleware('auth')->group(funct
         Route::post('/add', [ProductController::class, 'store'])->name('store');
         Route::get('/edit/{product}', [ProductController::class, 'edit'])->name('edit');
         Route::put('/edit/{id}', [ProductController::class, 'update'])->name('update');
-        // Route::delete('/soft-delete/{id}', [ProductController::class, 'softDelete'])->name('soft-delete');
-        // Route::delete('/force-delete/{id}', [ProductController::class, 'forceDelete'])->name('force-delete');
-        // Route::delete('/restore/{id}', [ProductController::class, 'restore'])->name('restore');
+        Route::delete('/soft-delete/{id}', [ProductController::class, 'softDelete'])->name('soft-delete');
+        Route::delete('/force-delete/{id}', [ProductController::class, 'forceDelete'])->name('force-delete');
+        Route::delete('/restore/{id}', [ProductController::class, 'restore'])->name('restore');
+    });
+    Route::prefix('posts')->name('post.')->group(function () {
+        Route::get('/', [PostController::class, 'index'])->name('index');
+        Route::get('/add', [PostController::class, 'add'])->name('add');
+        Route::post('/add', [PostController::class, 'store'])->name('store');
+        Route::get('/edit/{post}', [PostController::class, 'edit'])->name('edit');
+        Route::put('/edit/{id}', [PostController::class, 'update'])->name('update');
+        Route::delete('/soft-delete/{id}', [PostController::class, 'softDelete'])->name('soft-delete');
+        Route::delete('/force-delete/{id}', [PostController::class, 'forceDelete'])->name('force-delete');
+        Route::delete('/restore/{id}', [PostController::class, 'restore'])->name('restore');
     });
     Route::prefix('colors')->name('color.')->group(function () {
         Route::get('/', [ColorController::class, 'index'])->name('index');
