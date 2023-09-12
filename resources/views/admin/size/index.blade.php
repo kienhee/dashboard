@@ -36,7 +36,8 @@
                                     </a></td>
                                 </td>
                                 <td>
-                                    {{ $item->created_at->format('d-m-Y') ?? '' }}
+                                    <p class="m-0">{{ $item->created_at->format('d M Y') }}</p>
+                                    <small>{{ $item->created_at->format('h:i A') }}</small>
                                 </td>
                                 <td>
                                     <div class="dropdown">
@@ -45,7 +46,8 @@
                                             <i class="bx bx-dots-vertical-rounded"></i>
                                         </button>
                                         <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="{{ route('dashboard.size.edit', $item->id) }}"><i
+                                            <a class="dropdown-item"
+                                                href="{{ route('dashboard.size.edit', $item->id) }}"><i
                                                     class="bx bx-edit-alt me-1"></i>
                                                 Sửa thông tin</a>
                                             <form class="dropdown-item"

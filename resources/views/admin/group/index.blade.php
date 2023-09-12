@@ -17,7 +17,7 @@
             <table class="table">
                 <thead class="table-light">
                     <tr>
-                        <th>#ID</th>
+                        <th class="px-1 text-center" style="width: 50px">#ID</th>
                         <th>Tên nhóm</th>
                         <th>Ngày tạo</th>
                         <th>Cài đặt</th>
@@ -36,7 +36,8 @@
                                     </a></td>
 
                                 <td>
-                                    {{ $item->created_at->format('d-m-Y') ?? '' }}
+                                    <p class="m-0">{{ $item->created_at->format('d M Y') }}</p>
+                                    <small>{{ $item->created_at->format('h:i A') }}</small>
                                 </td>
                                 <td class="text-start">
                                     <div class="dropdown">

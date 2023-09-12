@@ -73,9 +73,9 @@
                         <th class="px-1 text-center" style="width: 50px">#ID</th>
                         <th class="px-1 text-center" style="width: 50px"></th>
                         <th>Tên sản phẩm</th>
-                        <th class="px-1 text-center" style="width: 130px">Danh mục</th>
                         <th class="px-1 text-center" style="width: 130px">Trạng thái</th>
                         <th class="px-1 text-center" style="width: 130px">Số lượng</th>
+                        <th style="width: 130px">Ngày tạo</th>
                         <th class="px-1 text-center" style="width: 130px">Cài đặt</th>
                     </tr>
                 </thead>
@@ -94,18 +94,22 @@
                                 </td>
                                 <td>
                                     <a href="{{ route('dashboard.product.edit', $item->id) }}" style="color: inherit    "
-                                        title="Click xem thêm">
+                                        title="Click xem thêm" class="d-block">
                                         <strong>
                                             {{ $item->name }}
                                         </strong>
                                     </a>
+                                    <small>Danh mục: {{ $item->category->name }}</small>
                                 </td>
-                                <td class="px-0 text-center">{{ $item->category->name }}</td>
                                 <td class="px-0 text-center"><span
                                         class="badge  me-1 {{ $item->deleted_at == null ? 'bg-label-success ' : ' bg-label-primary' }}">{{ $item->deleted_at == null ? 'Công khai' : 'Tạm ẩn' }}</span>
                                 </td>
                                 <td class="text-center px-0">
                                     {{ $item->quantity }}
+                                </td>
+                                <td>
+                                    <p class="m-0">{{ $item->created_at->format('d M Y') }}</p>
+                                    <small>{{ $item->created_at->format('h:i A') }}</small>
                                 </td>
 
                                 <td class="px-0 text-center">

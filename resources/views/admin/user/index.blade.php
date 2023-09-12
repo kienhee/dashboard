@@ -60,7 +60,6 @@
                     <tr>
                         <th>#ID</th>
                         <th>Họ và tên</th>
-                        <th>Email</th>
                         <th>Nhóm người dùng</th>
                         <th>SDT</th>
                         <th>Trạng thái</th>
@@ -78,12 +77,13 @@
                                         title="Click xem thêm"><strong>#{{ $item->id }}</strong>
                                     </a>
                                 </td>
-                                <td> <a href="{{ route('dashboard.user.edit', $item->id) }}" title="Click xem thêm"
-                                        style="color: inherit"><strong>{{ $item->full_name }}</strong>
-                                    </a></td>
                                 <td>
-                                    {{ $item->email }}
+                                    <a href="{{ route('dashboard.user.edit', $item->id) }}" title="Click xem thêm"
+                                        style="color: inherit" class="d-block"><strong>{{ $item->full_name }}</strong>
+                                    </a>
+                                    <small>{{ $item->email }}</small>
                                 </td>
+
                                 <td>
                                     {{ $item->group->name ?? '' }}
                                 </td>
@@ -97,7 +97,8 @@
                                         class="badge  me-1 {{ $item->email_verified_at == null ? ' bg-label-primary' : 'bg-label-success' }}">{{ $item->email_verified_at == null ? 'Chưa kích hoạt' : 'Đã kích hoạt' }}</span>
                                 </td>
                                 <td>
-                                    {{ $item->created_at->format('d-m-Y') ?? '' }}
+                                    <p class="m-0">{{ $item->created_at->format('d M Y') }}</p>
+                                    <small>{{ $item->created_at->format('h:i A') }}</small>
                                 </td>
                                 <td class="text-center">
                                     <div class="dropdown">

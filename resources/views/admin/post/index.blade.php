@@ -58,10 +58,10 @@
                         <th class="px-1 text-center" style="width: 50px">#ID</th>
                         <th class="px-1 text-center" style="width: 50px"></th>
                         <th>Tiêu đề bài viết</th>
-                        <th class="px-1 text-center" style="width: 130px">Người đăng</th>
-                        <th class="px-1 text-center" style="width: 130px">Ngày đăng</th>
-                        <th class="px-1 text-center" style="width: 130px">Trạng thái</th>
-                        <th class="px-1 text-center" style="width: 130px">Cài đặt</th>
+                        <th style="width: 130px">Người đăng</th>
+                        <th style="width: 130px">Ngày đăng</th>
+                        <th style="width: 130px">Trạng thái</th>
+                        <th style="width: 130px">Cài đặt</th>
                     </tr>
                 </thead>
                 <tbody class="table-border-bottom-0">
@@ -88,8 +88,9 @@
                                 <td class="text-center px-0">
                                     {{ $item->user->full_name }}
                                 </td>
-                                <td class="text-center px-0">
-                                    {{ $item->created_at->format('d/m/Y') }}
+                                <td>
+                                    <p class="m-0">{{ $item->created_at->format('d M Y') }}</p>
+                                    <small>{{ $item->created_at->format('h:i A') }}</small>
                                 </td>
                                 <td class="px-0 text-center"><span
                                         class="badge  me-1 {{ $item->deleted_at == null ? 'bg-label-success ' : ' bg-label-primary' }}">{{ $item->deleted_at == null ? 'Công khai' : 'Tạm ẩn' }}</span>

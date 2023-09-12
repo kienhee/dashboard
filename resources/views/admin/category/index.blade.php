@@ -70,7 +70,7 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th>#ID</th>
+                                <th class="px-1 text-center" style="width: 50px">#ID</th>
                                 <th>Tên danh mục</th>
                                 <th>Trạng thái</th>
                                 <th>Ngày tạo</th>
@@ -98,7 +98,8 @@
                                         </td>
 
                                         <td>
-                                            {{ $item->created_at->format('d-m-Y') ?? '' }}
+                                            <p class="m-0">{{ $item->created_at->format('d M Y') }}</p>
+                                            <small>{{ $item->created_at->format('h:i A') }}</small>
                                         </td>
                                         <td>
                                             <div class="dropdown">

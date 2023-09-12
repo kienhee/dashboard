@@ -36,13 +36,14 @@
                                 <td><a href="{{ route('dashboard.color.edit', $item->id) }}" title="Click xem thêm"
                                         style="color: inherit"><strong>{{ $item->name }}</strong>
                                     </a></td>
-                                <td class="d-flex align-items-center gap-2">
+                                <td>
                                     <span>{{ $item->code }} </span>
                                     <span class="w-px-20 h-px-20  d-inline-block"
                                         style="border-radius:2px;background-color:{{ $item->code }}"></span>
                                 </td>
                                 <td>
-                                    {{ $item->created_at->format('d-m-Y') ?? '' }}
+                                    <p class="m-0">{{ $item->created_at->format('d M Y') }}</p>
+                                    <small>{{ $item->created_at->format('h:i A') }}</small>
                                 </td>
                                 <td>
                                     <div class="dropdown">
