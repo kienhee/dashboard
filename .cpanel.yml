@@ -1,0 +1,21 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/username/public_html
+    - /bin/cp -R * $DEPLOYPATH
+    - /bin/rm -rf $DEPLOYPATH/vendor
+    - /bin/rm -rf $DEPLOYPATH/storage
+    - /bin/mkdir $DEPLOYPATH/storage
+    - /bin/mkdir $DEPLOYPATH/storage/app
+    - /bin/mkdir $DEPLOYPATH/storage/framework
+    - /bin/mkdir $DEPLOYPATH/storage/framework/cache
+    - /bin/mkdir $DEPLOYPATH/storage/framework/sessions
+    - /bin/mkdir $DEPLOYPATH/storage/framework/testing
+    - /bin/mkdir $DEPLOYPATH/storage/framework/views
+    - /bin/mkdir $DEPLOYPATH/storage/logs
+    - /bin/chmod -R 755 $DEPLOYPATH/storage
+    - /bin/chown -R username:username $DEPLOYPATH
+    - /bin/cp /home/username/.env $DEPLOYPATH
+    - cd $DEPLOYPATH
+    - /usr/local/bin/composer install --no-dev
+    - /usr/local/bin/php artisan migrate --force
