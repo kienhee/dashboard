@@ -1,5 +1,5 @@
 @extends('admin.layout.index')
-@section('title', 'Overview')
+@section('title', $title)
 
 @section('content')
 <div class="row">

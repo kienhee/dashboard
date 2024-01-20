@@ -1,16 +1,13 @@
 @extends('admin.layout.index')
-
+@section('title',$title)
 @section('content')
-<!-- Forgot Password -->
 <div class="card">
     <div class="card-body">
         <!-- Logo -->
         <div class="app-brand justify-content-center">
 
-
             <span class="app-brand-text demo text-body fw-bolder" style="text-transform: uppercase">Reset
                 Password</span>
-
         </div>
         <!-- /Logo -->
         <form id="formAuthentication" class="mb-3" action="{{ route('auth.PostResetPassword') }}" method="POST">

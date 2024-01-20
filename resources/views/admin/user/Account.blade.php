@@ -1,18 +1,8 @@
 @extends('admin.layout.index')
-@section('title', 'User Information')
+@section('title', 'Profile')
 @section('content')
-<nav aria-label="breadcrumb">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-            <a href="javascript:void(0);">Home</a>
-        </li>
-        <li class="breadcrumb-item">
-            <a href="javascript:void(0);">Library</a>
-        </li>
-        <li class="breadcrumb-item active">Data</li>
-    </ol>
-</nav>
-
+<x-breadcrumb parentName="Users" parentLink="dashboard.user.index"
+    childrenName="{{ Auth::user()->full_name }}" />
 <section class="card">
     <x-alert />
     <form method="POST" class="card-body" action="{{ route('dashboard.user.account-setting-post', Auth::user()->id) }}"

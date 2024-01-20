@@ -9,6 +9,7 @@ class DashboardController extends Controller
 {
     public function dashboard()
     {
-        return view('admin.dashboard');
+        $title = "Overview";
+        return view('admin.dashboard',compact('title'));
     }
 }

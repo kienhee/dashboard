@@ -4,7 +4,6 @@ $moduleName = 'user';
 
 @extends('admin.layout.index')
 @section('title', 'Create New ' . $moduleName)
-
 @section('content')
 <x-breadcrumb parentName="User Management" parentLink="dashboard.user.index"
     childrenName="Create New {{ $moduleName }}" />

@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin\Auth;
 use App\Http\Controllers\Controller;
 use App\Mail\ResetPassword;
 use App\Models\PasswordRessetTokens;
-use App\Models\Setting;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,12 +16,12 @@ class AuthController extends Controller
 {
     public function loginView()
     {
-        // dd(Hash::make('123456789'));
+        $title = "Welcome back! 👋";
         if (Auth::check()) {
             return  back();
         }
         $layout = 'auth';
-        return view('admin.auth.Login', compact('layout'));
+        return view('admin.auth.Login', compact('layout','title'));
     }
 
     public function login(Request $request)
@@ -43,11 +42,12 @@ class AuthController extends Controller
     }
     public function ForgotPassword()
     {
+        $title = "Forgot Password";
         if (Auth::check()) {
             return  back();
         }
         $layout = 'auth';
-        return view('admin.auth.ForgotPassword', compact('layout'));
+        return view('admin.auth.ForgotPassword', compact('layout', 'title'));
     }
     public function SendMailForgotPassword(Request $request)
     {
@@ -86,11 +86,12 @@ class AuthController extends Controller
     public function resetPassword(Request $request)
     {
 
+        $title = "Reset Password";
         if ($request->has('email') && $request->has('token')) {
             $checkToken = PasswordRessetTokens::where('email', $request->email)->first();
             if ($checkToken && $checkToken->token == $request->token && now()->lt($checkToken->expired)) {
                 $layout = 'auth';
-                return view('admin.auth.resetPassword', compact('layout'));
+                return view('admin.auth.resetPassword', compact('layout', 'title'));
             }
         }
         return abort(404);
@@ -120,6 +121,6 @@ class AuthController extends Controller
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
-        return redirect()->route('auth.loginView');
+        return redirect()->route('auth.loginView',['status'=> "successfully"]);
     }
 }

@@ -1,5 +1,5 @@
 @extends('admin.layout.index')
-
+@section('title',$title)
 @section('content')
 <!-- Forgot Password -->
 <div class="card">

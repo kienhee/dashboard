@@ -11,12 +11,10 @@ class headerTable extends Component
     /**
      * Create a new component instance.
      */
-    public $tableName;
     public $link;
     public $linkName;
-    public function __construct($tableName, $link, $linkName)
+    public function __construct($link, $linkName)
     {
-        $this->tableName = $tableName;
         $this->link = $link;
         $this->linkName = $linkName;
     }

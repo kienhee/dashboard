@@ -1,5 +1,5 @@
 @extends('admin.layout.index')
-@section('title', 'Đăng nhập')
+@section('title', $title)
 @section('content')
 <!-- Login -->
 <div class="card">

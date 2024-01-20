@@ -11,8 +11,11 @@ use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
+
+ 
     public function index(Request $request)
     {
+        $title = "Users";
         $result = User::query();
 
         if ($request->has('keywords') && $request->keywords != null) {
@@ -37,7 +40,7 @@ class UserController extends Controller
         }
 
         $users = $result->paginate(20);
-        return view('admin.user.index', compact('users'));
+        return view('admin.user.index', compact('users', 'title'));
     }
 
     public function add()
