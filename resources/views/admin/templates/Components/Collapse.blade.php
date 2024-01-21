@@ -25,7 +25,7 @@
                 </p>
                 <div class="collapse" id="collapseExample">
                     <div class="d-grid d-sm-flex p-3 border">
-                        <img src="{{ asset('admin') }}/img/elements/1.jpg" alt="collapse-image" height="125"
+                        <img src="{{ asset('server') }}/img/elements/1.jpg" alt="collapse-image" height="125"
                             class="me-4 mb-sm-0 mb-2" />
                         <span>
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
@@ -68,7 +68,7 @@
                     <div class="col-12 col-md-6 mb-2 mb-md-0">
                         <div class="collapse multi-collapse" id="multiCollapseExample1">
                             <div class="d-grid d-sm-flex p-3 border">
-                                <img src="{{ asset('admin') }}/img/elements/2.jpg" alt="collapse-image" height="125"
+                                <img src="{{ asset('server') }}/img/elements/2.jpg" alt="collapse-image" height="125"
                                     class="me-4 mb-sm-0 mb-2" />
                                 <span>
                                     All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as
@@ -84,7 +84,7 @@
                     <div class="col-12 col-md-6">
                         <div class="collapse multi-collapse" id="multiCollapseExample2">
                             <div class="d-grid d-sm-flex p-3 border">
-                                <img src="{{ asset('admin') }}/img/elements/3.jpg" alt="collapse-image" height="125"
+                                <img src="{{ asset('server') }}/img/elements/3.jpg" alt="collapse-image" height="125"
                                     class="me-4 mb-sm-0 mb-2" />
                                 <span>
                                     There are many variations of passages of Lorem Ipsum available, but the majority

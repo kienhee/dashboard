@@ -77,7 +77,7 @@
     <div class="card overflow-hidden mb-4" style="height: 300px">
       <h5 class="card-header">Horizontal Scrollbar</h5>
       <div class="card-body" id="horizontal-example">
-        <img src="{{ asset('admin') }}/img/backgrounds/18.jpg" alt="scrollbar-image" />
+        <img src="{{ asset('server') }}/img/backgrounds/18.jpg" alt="scrollbar-image" />
       </div>
     </div>
   </div>
@@ -88,7 +88,7 @@
     <div class="card overflow-hidden" style="height: 500px">
       <h5 class="card-header">Vertical & Horizontal Scrollbars</h5>
       <div class="card-body" id="both-scrollbars-example">
-        <img src="{{ asset('admin') }}/img/backgrounds/18.jpg" alt="scrollbar-image" />
+        <img src="{{ asset('server') }}/img/backgrounds/18.jpg" alt="scrollbar-image" />
       </div>
     </div>
   </div>

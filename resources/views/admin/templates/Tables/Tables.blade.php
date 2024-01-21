@@ -25,15 +25,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -59,15 +62,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -93,15 +99,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -129,15 +138,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -186,15 +198,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -220,15 +235,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -254,15 +272,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -290,15 +311,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -347,15 +371,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -381,15 +408,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -415,15 +445,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -451,15 +484,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -508,15 +544,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -542,15 +581,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -576,15 +618,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -612,15 +657,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -669,15 +717,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -703,15 +754,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -737,15 +791,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -773,15 +830,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -842,15 +902,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -876,15 +939,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -910,15 +976,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -946,15 +1015,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1003,15 +1075,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1037,15 +1112,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1071,15 +1149,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1107,15 +1188,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1167,17 +1251,17 @@
                             <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                                 <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                     class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                    <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar"
+                                    <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
                                         class="rounded-circle" />
                                 </li>
                                 <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                     class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                    <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar"
+                                    <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
                                         class="rounded-circle" />
                                 </li>
                                 <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                     class="avatar avatar-xs pull-up" title="Christina Parker">
-                                    <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar"
+                                    <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
                                         class="rounded-circle" />
                                 </li>
                             </ul>
@@ -1205,17 +1289,17 @@
                             <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                                 <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                     class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                    <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar"
+                                    <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
                                         class="rounded-circle" />
                                 </li>
                                 <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                     class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                    <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar"
+                                    <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
                                         class="rounded-circle" />
                                 </li>
                                 <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                     class="avatar avatar-xs pull-up" title="Christina Parker">
-                                    <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar"
+                                    <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
                                         class="rounded-circle" />
                                 </li>
                             </ul>
@@ -1243,17 +1327,17 @@
                             <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                                 <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                     class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                    <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar"
+                                    <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
                                         class="rounded-circle" />
                                 </li>
                                 <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                     class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                    <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar"
+                                    <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
                                         class="rounded-circle" />
                                 </li>
                                 <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                     class="avatar avatar-xs pull-up" title="Christina Parker">
-                                    <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar"
+                                    <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
                                         class="rounded-circle" />
                                 </li>
                             </ul>
@@ -1284,17 +1368,17 @@
                             <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                                 <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                     class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                    <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar"
+                                    <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
                                         class="rounded-circle" />
                                 </li>
                                 <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                     class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                    <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar"
+                                    <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
                                         class="rounded-circle" />
                                 </li>
                                 <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                     class="avatar avatar-xs pull-up" title="Christina Parker">
-                                    <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar"
+                                    <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
                                         class="rounded-circle" />
                                 </li>
                             </ul>
@@ -1346,15 +1430,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1380,15 +1467,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1414,15 +1504,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1450,15 +1543,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1507,15 +1603,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1541,15 +1640,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1575,15 +1677,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1611,15 +1716,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1669,15 +1777,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1703,15 +1814,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1737,15 +1851,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1773,15 +1890,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1831,15 +1951,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1865,15 +1988,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1899,15 +2025,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1933,15 +2062,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -1969,15 +2101,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -2003,15 +2138,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -2037,15 +2175,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -2073,15 +2214,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -2107,15 +2251,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -2141,15 +2288,18 @@
                         <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                                <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                                <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                                 class="avatar avatar-xs pull-up" title="Christina Parker">
-                                <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                                <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar"
+                                    class="rounded-circle" />
                             </li>
                         </ul>
                     </td>
@@ -2197,15 +2347,15 @@
                     <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                         <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                             class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                            <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                            <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
                         </li>
                         <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                             class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                            <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                            <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
                         </li>
                         <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                             class="avatar avatar-xs pull-up" title="Christina Parker">
-                            <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                            <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
                         </li>
                     </ul>
                 </td>
@@ -2231,15 +2381,15 @@
                     <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                         <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                             class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                            <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                            <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
                         </li>
                         <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                             class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                            <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                            <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
                         </li>
                         <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                             class="avatar avatar-xs pull-up" title="Christina Parker">
-                            <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                            <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
                         </li>
                     </ul>
                 </td>
@@ -2265,15 +2415,15 @@
                     <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                         <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                             class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                            <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                            <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
                         </li>
                         <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                             class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                            <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                            <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
                         </li>
                         <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                             class="avatar avatar-xs pull-up" title="Christina Parker">
-                            <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                            <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
                         </li>
                     </ul>
                 </td>
@@ -2301,15 +2451,15 @@
                     <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                         <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                             class="avatar avatar-xs pull-up" title="Lilian Fuller">
-                            <img src="{{ asset('admin') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
+                            <img src="{{ asset('server') }}/img/avatars/5.png" alt="Avatar" class="rounded-circle" />
                         </li>
                         <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                             class="avatar avatar-xs pull-up" title="Sophia Wilkerson">
-                            <img src="{{ asset('admin') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
+                            <img src="{{ asset('server') }}/img/avatars/6.png" alt="Avatar" class="rounded-circle" />
                         </li>
                         <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
                             class="avatar avatar-xs pull-up" title="Christina Parker">
-                            <img src="{{ asset('admin') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
+                            <img src="{{ asset('server') }}/img/avatars/7.png" alt="Avatar" class="rounded-circle" />
                         </li>
                     </ul>
                 </td>

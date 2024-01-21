@@ -3,12 +3,12 @@
            <li class="breadcrumb-item">
                <a
                    href="{{ url()->current() == route('dashboard.index') ? 'javascript:void(0)' : route('dashboard.index') }}">
-                   Overview</a>
+                   Dashboard</a>
            </li>
            <li class="breadcrumb-item">
                <a
-                   href="{{ url()->current() == route($parentLink) ? 'javascript:void(0)' : route($parentLink) }}">{{ $parentName }}</a>
+                   href="{{ url()->current() == route($routeIndex) ? 'javascript:void(0)' : route($routeIndex) }}">{{ $listName }}</a>
            </li>
-           <li class="breadcrumb-item active">{{ $childrenName }}</li>
+           <li class="breadcrumb-item active">{{ $currentPage }}</li>
        </ol>
    </nav>

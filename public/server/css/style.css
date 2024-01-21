@@ -370,3 +370,23 @@
 .wtree li a:focus+ul li:before {
   border-color: #aaa;
 }
+
+/* paginate datable */
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  background-color: #f0f2f4 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  border-color: #696cff !important;
+  background-color: #696cff !important;
+  color: #fff !important;
+  box-shadow: 0 .125rem .25rem rgba(105, 108, 255, .4) !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover{
+  background-color: transparent !important;
+  
+  color: #697a8d !important;
+  border-color: rgba(67, 89, 113, 0.3) !important; 
+}

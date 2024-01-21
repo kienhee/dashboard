@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\Auth\AuthController;
+use App\Http\Controllers\Admin\CommonController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\Group\GroupController;
@@ -53,6 +54,13 @@ Route::prefix('/dashboard')->name('dashboard.')->middleware('auth')->group(funct
     Route::get('/media', function () {
         return view('admin.media.index');
     })->name('media');
+    // commons
+
+    Route::prefix('commons')->name('commons.')->group(function () {
+        Route::get('/', [CommonController::class, 'list'])->name('list');
+        Route::get('/data', [CommonController::class, 'data'])->name('data');
+        Route::get('/add', [CommonController::class, 'add'])->name('add');
+    });
 });
 
 Route::prefix('/auth')->name('auth.')->group(function () {

@@ -23,7 +23,6 @@ return new class extends Migration
             $table->string('image_meta');
             $table->string('title_meta');
             $table->string('description_meta');
-            $table->timestamps();
             $table->softDeletes();
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent();

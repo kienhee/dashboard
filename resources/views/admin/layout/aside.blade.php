@@ -33,6 +33,12 @@ $menu = [
 'classIcon' => 'menu-icon tf-icons bx bxs-folder-open',
 'route' => 'dashboard.media',
 'children' => [],
+],
+[
+'name' => 'Commons',
+'classIcon' => 'menu-icon tf-icons bx bx-table',
+'route' => 'dashboard.commons.list',
+'children' => [],
 ]
 ];
 
